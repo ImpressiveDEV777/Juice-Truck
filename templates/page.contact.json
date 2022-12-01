@@ -1,0 +1,121 @@
+{
+  "sections": {
+    "main": {
+      "type": "contact--form",
+      "blocks": {
+        "9d1104dc-c8f6-4707-8100-bffa060c301c": {
+          "type": "text",
+          "settings": {
+            "title": "Organization",
+            "placeholder": "Name of Your Organization",
+            "required": false
+          }
+        },
+        "a8074913-d3c4-45e4-a3bb-4e94e3297ce3": {
+          "type": "text",
+          "settings": {
+            "title": "Contact Person",
+            "placeholder": "Your Name",
+            "required": false
+          }
+        },
+        "8de6f1ca-d9f3-4819-ac03-f665aa650e15": {
+          "type": "telephone",
+          "settings": {
+            "title": "Phone Number",
+            "placeholder": "555-555-5555",
+            "required": false
+          }
+        },
+        "60a201ea-5639-4020-94d8-712d6e54bd2d": {
+          "type": "email",
+          "settings": {
+            "title": "Email",
+            "placeholder": "your@email.com",
+            "required": true
+          }
+        },
+        "12c8db52-db45-4d46-ac1b-3175b719f983": {
+          "type": "text",
+          "settings": {
+            "title": "Website",
+            "placeholder": "www.company.com",
+            "required": false
+          }
+        },
+        "1fe48def-f21d-45e4-aaf3-3b89e40d44e7": {
+          "type": "date",
+          "settings": {
+            "title": "Event Date",
+            "required": false
+          }
+        },
+        "a0f7d961-677d-4a56-9488-267921ece857": {
+          "type": "text",
+          "settings": {
+            "title": "Type of Event",
+            "placeholder": "Environment",
+            "required": false
+          }
+        },
+        "e60c1006-2592-4d54-9ba5-1335f29c6743": {
+          "type": "textarea",
+          "settings": {
+            "title": "Short Description of the Event",
+            "placeholder": "Expected attendance, location, etc",
+            "required": true
+          }
+        },
+        "250eb7c6-7656-480f-a9f8-147eb206488a": {
+          "type": "textarea",
+          "settings": {
+            "title": "Please describe what kind of donation you are seeking and it will be used?",
+            "placeholder": "",
+            "required": false
+          }
+        },
+        "92f04644-d0e3-4591-94f8-f53b766be410": {
+          "type": "textarea",
+          "settings": {
+            "title": "Please list what type of exposure The Juice Truck will receive in supporting your event?",
+            "placeholder": "",
+            "required": false
+          }
+        },
+        "6f0af0a6-bcc3-4af8-856a-225850a3c2b5": {
+          "type": "textarea",
+          "settings": {
+            "title": "Will there be any other sponsors or business involved in your event?",
+            "placeholder": "",
+            "required": false
+          }
+        }
+      },
+      "block_order": [
+        "9d1104dc-c8f6-4707-8100-bffa060c301c",
+        "a8074913-d3c4-45e4-a3bb-4e94e3297ce3",
+        "8de6f1ca-d9f3-4819-ac03-f665aa650e15",
+        "60a201ea-5639-4020-94d8-712d6e54bd2d",
+        "12c8db52-db45-4d46-ac1b-3175b719f983",
+        "1fe48def-f21d-45e4-aaf3-3b89e40d44e7",
+        "a0f7d961-677d-4a56-9488-267921ece857",
+        "e60c1006-2592-4d54-9ba5-1335f29c6743",
+        "250eb7c6-7656-480f-a9f8-147eb206488a",
+        "92f04644-d0e3-4591-94f8-f53b766be410",
+        "6f0af0a6-bcc3-4af8-856a-225850a3c2b5"
+      ],
+      "settings": {
+        "title": "Contact",
+        "terms": true,
+        "content_max_width": 500,
+        "bg_color": "",
+        "color": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,123 @@
+{% liquid
+  assign id = section.id
+
+  assign section_style = section.settings.section_style
+
+  assign button_text_color = section.settings.button_text_color
+  assign button_border_color = section.settings.button_border_color
+  
+  assign button_count = section.settings.button_count
+%}
+
+{% assign column = 'button-column-' | append: button_count %}
+
+{% assign modifiers = '' %}
+
+{% assign modifiers = modifiers | append: ' section--' | append: section_style %}
+
+{% if section_style == 'full-height' %}
+  {% assign modifiers = modifiers | append: ' section--contrast' %}
+{% endif %}
+
+{% if section_style != 'full-height' and section_style != 'contrast' %}
+  {% assign modifiers = modifiers | append: ' section--bordered' %}
+{% endif %}
+
+<section
+  data-section-id="{{ id }}"
+  data-section-type="image-button-columns"
+  class="section image-button-columns{{ modifiers }}"
+>
+  <div class="image-button-container-p">
+    {% for block in section.blocks %}
+   	  <a href="{{ block.settings.link }}" class="image-button-p {{ column }}" 
+         style="border-color: {{ button_border_color}}; color: {{ button_text_color }}; background-image: url('{{ block.settings.image | img_url: 'master' }}')">
+        <h2>{{ block.settings.text }}</h2>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Image button columns",
+    "settings": [
+	  {
+        "type": "select",
+        "id": "section_style",
+        "label": "t:sections.image_with_text.settings.section_style.label",
+        "default": "default",
+        "options": [
+          {
+            "value": "default",
+            "label": "t:sections.image_with_text.settings.section_style.option_1"
+          },
+          {
+            "value": "contrast",
+            "label": "t:sections.image_with_text.settings.section_style.option_2"
+          },
+          {
+            "value": "full-height",
+            "label": "t:sections.image_with_text.settings.section_style.option_3"
+          }
+        ]
+      },
+	  {
+		"type": "range",
+		"id": "button_count",
+		"label": "Column Count",
+		"min": 1,
+		"max": 4,
+		"step": 1,
+		"default": 2
+	  },
+	  {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "t:sections.image_with_text.settings.button_text_color.label",
+        "default": "#1b1b1b"
+      },
+      {
+        "type": "color",
+        "id": "button_border_color",
+        "label": "t:sections.image_with_text.settings.button_border_color.label",
+        "default": "#dedede"
+      }
+	],
+	"blocks": [
+	  {
+		"type": "image-button",
+		"name": "Image Button",
+		"settings": [
+		  {
+			"type": "image_picker",
+			"id": "image",
+			"label": "Button Image"
+		  },
+		  {
+			"type": "url",
+			"id": "link",
+			"label": "Button Link"
+		  },
+		  {
+			"type": "text",
+			"id": "text",
+			"label": "Button Text"
+		  }
+		]
+	  }
+	],
+	"presets": [
+      {
+        "name": "Image button columns",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

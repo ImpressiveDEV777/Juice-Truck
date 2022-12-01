@@ -1,0 +1,157 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_max_width": 400
+      }
+    },
+    "1655914914cf386314": {
+      "type": "rich-text",
+      "blocks": {
+        "1655914914b60b13d2-1": {
+          "type": "title",
+          "settings": {
+            "title": "<p>Sponsorship & Donations<\/p>"
+          }
+        },
+        "1655914914b60b13d2-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p> Thank you for your interest in considering us for your event!  <em>Currently our Sponsorship and Donations budget is allocated<\/em>. We love supporting the Vancouver community and while every cause is worthwhile, we cannot financially contribute to all of the requests we receive. At times we have to decline a request we may love and believe in, simply because our budget has already been committed elsewhere.<\/p><p><em>Due to the high number of requests we receive daily, we cannot always respond to every request<\/em>. We do not provide monetary donations and we ask that you provide us with a minimum of 1 month notice prior to your event date when sending in your requests.<\/p><p>To help us make a decision on your charitable event, please fill out the form below.  To insure that we can make the most of our charitable donations, we use the filters of environment, plant-based health, youth and education.  Please note that these are the filters we use when choosing to work with other organizations in the community.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1655914914b60b13d2-1",
+        "1655914914b60b13d2-2"
+      ],
+      "settings": {
+        "section_style": "default",
+        "alignment": "center",
+        "text_max_width": 600
+      }
+    },
+    "1656354890ca275cff": {
+      "type": "contact--form",
+      "blocks": {
+        "3747cf06-bb96-4310-afab-ebad11fc6da0": {
+          "type": "text",
+          "settings": {
+            "title": "Organization",
+            "placeholder": "",
+            "required": false
+          }
+        },
+        "1656354890f478ae45-0": {
+          "type": "text",
+          "settings": {
+            "title": "Contact Person",
+            "placeholder": "",
+            "required": false
+          }
+        },
+        "fabfcb1d-21e8-428a-bac1-209877d5493d": {
+          "type": "telephone",
+          "settings": {
+            "title": "Phone Number",
+            "placeholder": "",
+            "required": false
+          }
+        },
+        "1656354890f478ae45-1": {
+          "type": "email",
+          "settings": {
+            "title": "Email",
+            "placeholder": "",
+            "required": true
+          }
+        },
+        "2bf8ce99-a0f7-410e-88fe-935173a9e57b": {
+          "type": "text",
+          "settings": {
+            "title": "Website",
+            "placeholder": "",
+            "required": false
+          }
+        },
+        "da6578f3-ae36-4ef1-864d-ad8236961a1e": {
+          "type": "text",
+          "settings": {
+            "title": "Event Date",
+            "placeholder": "July 15, 2022",
+            "required": false
+          }
+        },
+        "65ce3a25-8957-48fd-9fd3-4c28c76c52f4": {
+          "type": "text",
+          "settings": {
+            "title": "Type of Event",
+            "placeholder": "",
+            "required": false
+          }
+        },
+        "9788d3f5-282b-476c-a726-05113178e74d": {
+          "type": "textarea",
+          "settings": {
+            "title": "Short Description of the Event",
+            "placeholder": "",
+            "required": false
+          }
+        },
+        "8ce41d9d-5312-4168-81d4-a594c46b71ff": {
+          "type": "textarea",
+          "settings": {
+            "title": "Please describe what kind of donation you are seeking and it will be used?",
+            "placeholder": "",
+            "required": false
+          }
+        },
+        "7f785278-1327-4a6b-ae8c-95d6db13b1f9": {
+          "type": "textarea",
+          "settings": {
+            "title": "Please list what type of exposure The Juice Truck will receive in supporting your event?",
+            "placeholder": "",
+            "required": false
+          }
+        },
+        "f9ce7a1d-0110-4eb0-8bbc-f211abd041ac": {
+          "type": "textarea",
+          "settings": {
+            "title": "Will there be any other sponsors or business involved in your event?",
+            "placeholder": "",
+            "required": false
+          }
+        }
+      },
+      "block_order": [
+        "3747cf06-bb96-4310-afab-ebad11fc6da0",
+        "1656354890f478ae45-0",
+        "fabfcb1d-21e8-428a-bac1-209877d5493d",
+        "1656354890f478ae45-1",
+        "2bf8ce99-a0f7-410e-88fe-935173a9e57b",
+        "da6578f3-ae36-4ef1-864d-ad8236961a1e",
+        "65ce3a25-8957-48fd-9fd3-4c28c76c52f4",
+        "9788d3f5-282b-476c-a726-05113178e74d",
+        "8ce41d9d-5312-4168-81d4-a594c46b71ff",
+        "7f785278-1327-4a6b-ae8c-95d6db13b1f9",
+        "f9ce7a1d-0110-4eb0-8bbc-f211abd041ac"
+      ],
+      "settings": {
+        "title": "Contact us",
+        "terms": true,
+        "content_max_width": 500,
+        "bg_color": "",
+        "color": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1655914914cf386314",
+    "1656354890ca275cff"
+  ]
+}

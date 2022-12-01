@@ -1,0 +1,86 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "border": {
+          "type": "border",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_popup_option": "Size",
+            "variant_popup_text": "Size guide",
+            "variant_popup_page": ""
+          }
+        },
+        "1072397f-bc0c-4d4e-96dc-407ae632ec2b": {
+          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "style": "paragraph"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "border",
+        "variant_picker",
+        "1072397f-bc0c-4d4e-96dc-407ae632ec2b",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_full_width": false,
+        "show_thumbnails": true,
+        "thumbnail_position": "vertical",
+        "thumbnail_size": "large",
+        "enable_video_looping": true
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "columns": 4,
+        "overline": "Collection",
+        "title": "Recommended",
+        "subheading": "<p>You might want to take a look at these.<\/p>",
+        "text_max_width": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recommendations"
+  ]
+}

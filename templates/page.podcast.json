@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "16529184075d786dfe": {
+      "type": "rich-text",
+      "blocks": {
+        "16529184070b1d2d70-0": {
+          "type": "overline",
+          "settings": {
+            "overline": "<p>Welcome To<\/p>"
+          }
+        },
+        "16529184070b1d2d70-1": {
+          "type": "title",
+          "settings": {
+            "title": "<p>A LITTLE MORE GOOD<\/p>"
+          }
+        },
+        "16529184070b1d2d70-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A podcast where hosts, Dean Morris and The Juice Truck Co-founder Zach Berman, explore the fascinating areas where wellness, mindfulness, sustainability, movement, business, our own evolution and adventure intersect.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16529184070b1d2d70-0",
+        "16529184070b1d2d70-1",
+        "16529184070b1d2d70-2"
+      ],
+      "settings": {
+        "section_style": "default",
+        "alignment": "center",
+        "text_max_width": 50
+      }
+    },
+    "165291849617902489": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<p style=\"text-align: center;\"><iframe allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" frameborder=\"0\" height=\"450\" style=\"width: 100%; max-width: 980px; overflow: hidden; background: transparent;\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" src=\"https:\/\/embed.podcasts.apple.com\/ca\/podcast\/a-little-more-good\/id1564999674\"><\/iframe><\/p>"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_max_width": 500
+      }
+    }
+  },
+  "order": [
+    "16529184075d786dfe",
+    "165291849617902489",
+    "main"
+  ]
+}

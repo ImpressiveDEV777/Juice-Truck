@@ -1,0 +1,813 @@
+{
+  "current": {
+    "color_accent": "#e9485d",
+    "color_text": "#1b1b1b",
+    "color_bg": "#ffffff",
+    "color_button": "#ffffff",
+    "color_button_txt": "#1b1b1b",
+    "color_button2_bg": "#1b1b1b",
+    "color_button2_txt": "#ffffff",
+    "color_button3_bg": "rgba(0,0,0,0)",
+    "color_button3_txt": "#ffffff",
+    "color_border": "#dedede",
+    "color_input_text": "#8b8b8b",
+    "color_icon": "#b1b1b1",
+    "color_header_text": "#000000",
+    "color_header_bg": "#ffffff",
+    "color_header_border": "#dedede",
+    "color_footer_text": "#ffffff",
+    "color_footer_bg": "#ef445f",
+    "color_footer_border": "#ef445f",
+    "color_footer_button_background": "#ef445f",
+    "color_footer_button_text": "#ffffff",
+    "color_link_hover": "#e9485d",
+    "color_contrast_text": "#363636",
+    "color_contrast_bg": "#fbf9f6",
+    "color_contrast_border": "#e2e2e2",
+    "color_contrast_input_text": "#838383",
+    "color_contrast_icon": "#919191",
+    "color_drawer_text": "#1b1b1b",
+    "color_drawer_bg": "#fcfcfc",
+    "color_drawer_border": "#dadada",
+    "color_drawer_input_text": "#919191",
+    "color_drawer_icon": "#b1b1b1",
+    "font_heading": "electra_n4",
+    "size_heading": 18,
+    "uppercase_headings": false,
+    "font_body": "neue_haas_unica_n4",
+    "size_body": 14,
+    "font_logo": "electra_n4",
+    "logo_uppercase": false,
+    "font_logo_size": 22,
+    "font_button_size": 18,
+    "font_button_letter_spacing": 0.5,
+    "uppercase_buttons": true,
+    "image_radius": 16,
+    "button_shape": "30px",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_facebook_link": "",
+    "social_instagram_link": "",
+    "social_pinterest_link": "",
+    "social_snapchat_link": "",
+    "social_tumblr_link": "",
+    "social_twitter_link": "",
+    "social_vimeo_link": "",
+    "social_youtube_link": "",
+    "search_max_result_size": 4,
+    "search_show_products": true,
+    "search_show_articles": true,
+    "search_show_pages": true,
+    "search_show_price": true,
+    "search_show_vendor": false,
+    "swatch_options": "Color",
+    "chip_options": "Size",
+    "postal_code_p": "V3G,V2S,V2T,V4X,V2V,V4S,V2P,V4Z,V2R,V5K,V5L,V5M,V5N,V5P,V5R,V5S,V5T,V5V,V5W,V5X,V5Y,V5Z,V6A,V6B,V6C,V6E,V6G,V6H,V6J,V6K,V6L,V6M,V6N,V6P,V6R,V6S,V6T,V6Z,V7R,V7X,V7Y,V7P,V7S,V7T,V7V,V7W,V7G,V7H,V7J,V7K,V7L,V7M,V7N,V6V,V6W,V6X,V6Y,V7A,V7B,V7C,V7E,V3C,V3L,V3M,V3J,V3N,V5A,V5B,V5C,V5E,V5G,V5H,V5J,V0N,V2W,V4R,V2X,V3Y,V4A,V4N,V4P,V3R,V3S,V3T,V3V,V3W,V3X,V3Z,V4B,V4C,V4L,V4M,V4E,V4G,V4K,V3A,V1M,V4W,V2Y,V2Z,V3B,V3C,V3E,V3J,V3K,V3H,V8W,V8T,V8V,V9S,V9T,V9V,V9R,V8E,V8B,V0N",
+    "just_browsing_message": "Interested in this product? Please select a delivery method in the header above.",
+    "cart_quick_shop_enabled": true,
+    "cart_quick_shop_show_quantity_input": false,
+    "favicon": "",
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "cart_notes_enable": true,
+    "quick_cart_note": "Your subtotal today is [subtotal]. Shipping and taxes will calculated at checkout.",
+    "color_input_inactive_text": "#7C7C7C",
+    "color_sale_badge": "#bb4e39",
+    "color_sold_out_badge": "#1b1b1b",
+    "color_success_message": "#82b875",
+    "color_error_message": "#b6534c",
+    "color_contrast_input_inactive_text": "#a8a8a8",
+    "color_navigation_text": "#363636",
+    "color_navigation_bg": "#ffffff",
+    "color_navigation_feature": "#f4f4f4",
+    "color_drawer_input_inactive_text": "#bab8c7",
+    "color_quick_search_highlight": "#ffe898",
+    "color_navigation_border": "#e2e2e2",
+    "color_navigation_icon": "#aaaaaa",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "text": "Fresh Cold-Pressed Juice, Plant-Based Meals, Supplements and more delivered right to your door.",
+              "link": "",
+              "background_color": "#e9485d",
+              "text_color": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0"
+        ],
+        "settings": {
+          "announcement_bar_timing": 5
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "8b3bf3a6-9db9-4959-82f5-d7645dba69f0": {
+            "type": "mega_nav",
+            "settings": {
+              "dropdown_parent_link": "Shop",
+              "mega_nav_featured_image": "shopify:\/\/shop_images\/Rectangle_2.jpg",
+              "featured_image_heading": "",
+              "featured_image_link_text": "Wellness delivered to your door",
+              "featured_image_link": "shopify:\/\/collections\/juice-truck-products",
+              "feature_text": ""
+            }
+          },
+          "e3a288ac-4380-4ec0-a34a-04ee19bbbec7": {
+            "type": "mega_nav",
+            "settings": {
+              "dropdown_parent_link": "Info",
+              "mega_nav_featured_image": "shopify:\/\/shop_images\/Rectangle_3_8847b58a-28e7-4a4e-996a-97db569e4088.jpg",
+              "featured_image_heading": "",
+              "featured_image_link_text": "A little more good.",
+              "featured_image_link": "shopify:\/\/pages\/podcast",
+              "feature_text": ""
+            }
+          }
+        },
+        "block_order": [
+          "8b3bf3a6-9db9-4959-82f5-d7645dba69f0",
+          "e3a288ac-4380-4ec0-a34a-04ee19bbbec7"
+        ],
+        "settings": {
+          "header_style": "default",
+          "nav_alignment": "separate",
+          "detect_menu_length": true,
+          "show_locale_selector": false,
+          "show_currency_selector": true,
+          "logo": "shopify:\/\/shop_images\/Market.png",
+          "logo_max_size": 230,
+          "menu_left": "main-menu",
+          "menu_right": "main-menu-right",
+          "menu_mobile": "mobile-menu",
+          "transparent_index_header_enabled": true,
+          "transparent_header_foreground_color": "#000000",
+          "transparent_header_border_color": "#ffffff",
+          "transparent_header_border_opacity": 10
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1602015986783": {
+            "type": "link_list",
+            "settings": {
+              "menu": "quick-links"
+            }
+          },
+          "1605557765620": {
+            "type": "link_list",
+            "settings": {
+              "menu": "company"
+            }
+          },
+          "1d8f7888-39d3-4dc5-8073-4b9ace7cbb9a": {
+            "type": "link_list",
+            "settings": {
+              "menu": "follow-us"
+            }
+          },
+          "a5e66de0-4b38-4870-8d56-f0a0db9325ce": {
+            "type": "newsletter",
+            "settings": {
+              "subheading": "<p>Exclusive deals, latest updates, plant recipes and more juicy goodness. Newsletters worth reading. <\/p>"
+            }
+          },
+          "51759258-3838-4638-b4b5-3e532867f758": {
+            "type": "logo",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/Vertical.png"
+            }
+          }
+        },
+        "block_order": [
+          "1602015986783",
+          "1605557765620",
+          "1d8f7888-39d3-4dc5-8073-4b9ace7cbb9a",
+          "a5e66de0-4b38-4870-8d56-f0a0db9325ce",
+          "51759258-3838-4638-b4b5-3e532867f758"
+        ],
+        "settings": {
+          "show_headings": true,
+          "show_payment_icons": false,
+          "show_locale_selector": false,
+          "show_currency_selector": false,
+          "image": "shopify:\/\/shop_images\/Fruits.png",
+          "image_pos": "right"
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "blocks": {
+          "popup-0": {
+            "type": "heading",
+            "settings": {
+              "exit_intent_heading": "Subscribe",
+              "exit_intent_subheading": "<p>We only send emails once or twice a month and only about good things.<\/p>"
+            }
+          },
+          "popup-1": {
+            "type": "newsletter_signup",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "popup-0",
+          "popup-1"
+        ],
+        "settings": {
+          "enable_exit_intent": false,
+          "exit_intent_position": "bottom-right",
+          "text_color": "#1b1b1b",
+          "bg_color": "#ffffff",
+          "border_color": "#dedede"
+        }
+      },
+      "method_popup": {
+        "type": "method_popup",
+        "settings": {
+          "modal_title": "select shipping method",
+          "method1_title": "delivery",
+          "method1_detail": "Lower Mainland",
+          "method2_title": "shipping",
+          "method2_detail": "World-Wide",
+          "method3_title": "pick up",
+          "method3_detail": "at W 5th Avenue",
+          "browsing_text": "I'm just browsing"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "14479319785270113485": {
+        "type": "shopify:\/\/apps\/store-pickup-delivery\/blocks\/app-embed\/5599aff0-8af1-473a-a372-ecd72a32b4d5",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
+  },
+  "presets": {
+    "Chic": {
+      "color_accent": "#bf5c49",
+      "color_text": "#1b1b1b",
+      "color_bg": "#ffffff",
+      "color_button": "#f4f4f4",
+      "color_border": "#dedede",
+      "color_input_text": "#606060",
+      "color_icon": "#9c9c9c",
+      "color_header_text": "#171717",
+      "color_header_bg": "#ffffff",
+      "color_header_border": "#dcdcdc",
+      "color_footer_text": "#ffffff",
+      "color_footer_bg": "#9d4737",
+      "color_footer_border": "#d96a55",
+      "color_footer_button_background": "#b45240",
+      "color_footer_button_text": "#ffffff",
+      "color_contrast_text": "#262626",
+      "color_contrast_bg": "#f9f9f9",
+      "color_contrast_border": "#d6d6d6",
+      "color_contrast_input_text": "#5e5e5e",
+      "color_contrast_icon": "#939393",
+      "color_drawer_text": "#151515",
+      "color_drawer_bg": "#ffffff",
+      "color_drawer_border": "#d6d6d6",
+      "color_drawer_input_text": "#5e5e5e",
+      "color_drawer_icon": "#939393",
+      "font_heading": "bauer_bodoni_n7",
+      "size_heading": 18,
+      "uppercase_headings": false,
+      "font_body": "assistant_n4",
+      "size_body": 15,
+      "font_logo": "bauer_bodoni_n7",
+      "font_button_size": 12,
+      "font_button_letter_spacing": 1,
+      "uppercase_buttons": true,
+      "button_shape": "0",
+      "logo_uppercase": false,
+      "font_logo_size": 30,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "x",
+      "social_facebook_link": "x",
+      "social_pinterest_link": "x",
+      "social_instagram_link": "x",
+      "social_snapchat_link": "x",
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "search_max_result_size": 4,
+      "search_show_products": true,
+      "search_show_articles": true,
+      "search_show_pages": true,
+      "search_show_price": true,
+      "search_show_vendor": false,
+      "swatch_options": "Color",
+      "chip_options": "Size",
+      "cart_quick_shop_enabled": true,
+      "cart_quick_shop_show_quantity_input": false,
+      "cart_notes_enable": true,
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#197bbd",
+      "checkout_button_color": "#197bbd",
+      "checkout_error_color": "#e32c2b",
+      "color_input_inactive_text": "#7C7C7C",
+      "color_sale_badge": "#bb4e39",
+      "color_sold_out_badge": "#1b1b1b",
+      "color_success_message": "#82b875",
+      "color_error_message": "#b6534c",
+      "color_contrast_input_inactive_text": "#a8a8a8",
+      "color_navigation_text": "#363636",
+      "color_navigation_bg": "#ffffff",
+      "color_navigation_feature": "#f4f4f4",
+      "color_drawer_input_inactive_text": "#bab8c7",
+      "color_quick_search_highlight": "#ffe898",
+      "color_navigation_border": "#e2e2e2",
+      "color_navigation_icon": "#aaaaaa",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "text": "Announce something here",
+                "link": "",
+                "background_color": "#24352d",
+                "text_color": "#ffffff"
+              }
+            },
+            "1601761564951": {
+              "type": "announcement",
+              "settings": {
+                "text": "Cycle through multiple messages",
+                "link": "",
+                "background_color": "#24352d",
+                "text_color": "#ffffff"
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0",
+            "1601761564951"
+          ],
+          "settings": {
+            "announcement_bar_timing": 5
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "header_style": "default",
+            "nav_alignment": "left",
+            "detect_menu_length": false,
+            "show_locale_selector": false,
+            "show_currency_selector": true,
+            "logo": "",
+            "logo_max_size": 150,
+            "menu": "main-menu",
+            "transparent_index_header_enabled": true,
+            "transparent_logo": "",
+            "transparent_header_foreground_color": "#ffffff",
+            "transparent_header_border_color": "#ffffff",
+            "transparent_header_border_opacity": 10
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1602297933570": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>"
+              }
+            },
+            "1602015986783": {
+              "type": "link_list",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "1605557765620": {
+              "type": "link_list",
+              "settings": {
+                "menu": "main-menu"
+              }
+            },
+            "footer-1": {
+              "type": "newsletter",
+              "settings": {
+                "subheading": "<p>Subscribe to our mailing list. We only send emails once a month and only about good things.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "1602297933570",
+            "1602015986783",
+            "1605557765620",
+            "footer-1"
+          ],
+          "settings": {
+            "show_headings": true,
+            "show_payment_icons": true,
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        }
+      },
+      "content_for_index": [
+
+      ]
+    },
+    "Natural": {
+      "color_accent": "#ae877b",
+      "color_text": "#5b4c47",
+      "color_bg": "#fcf7ee",
+      "color_button": "#f4f4f4",
+      "color_border": "#e1d8ce",
+      "color_input_text": "#5b4c47",
+      "color_icon": "#5b4c47",
+      "color_header_text": "#534540",
+      "color_header_bg": "#fcf7ee",
+      "color_header_border": "#e1d8ce",
+      "color_footer_text": "#ffffff",
+      "color_footer_bg": "#ae877b",
+      "color_footer_border": "#9a766c",
+      "color_footer_button_background": "#927269",
+      "color_footer_button_text": "#ffffff",
+      "color_contrast_text": "#ffffff",
+      "color_contrast_bg": "#846b63",
+      "color_contrast_border": "#b69f97",
+      "color_contrast_input_text": "#ebd8d3",
+      "color_contrast_icon": "#ebd8d3",
+      "color_drawer_text": "#ffffff",
+      "color_drawer_bg": "#89695f",
+      "color_drawer_border": "#ab8d84",
+      "color_drawer_input_text": "#ebd8d3",
+      "color_drawer_icon": "#ebd8d3",
+      "font_heading": "mariposa_sans_n7",
+      "size_heading": 18,
+      "uppercase_headings": false,
+      "font_body": "din_next_slab_n4",
+      "size_body": 15,
+      "font_logo": "mariposa_sans_n7",
+      "logo_uppercase": false,
+      "font_logo_size": 22,
+      "font_button_size": 12,
+      "font_button_letter_spacing": 1,
+      "uppercase_buttons": true,
+      "button_shape": "0",
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_snapchat_link": "",
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "search_max_result_size": 4,
+      "search_show_products": true,
+      "search_show_articles": true,
+      "search_show_pages": true,
+      "search_show_price": true,
+      "search_show_vendor": false,
+      "swatch_options": "",
+      "chip_options": "",
+      "cart_quick_shop_enabled": true,
+      "cart_quick_shop_show_quantity_input": false,
+      "cart_notes_enable": true,
+      "quick_cart_note": "Your subtotal today is [subtotal]. Shipping and taxes will calculated at checkout.",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#197bbd",
+      "checkout_button_color": "#197bbd",
+      "checkout_error_color": "#e32c2b",
+      "color_input_inactive_text": "#9c8881",
+      "color_sale_badge": "#c47961",
+      "color_sold_out_badge": "#1b1b1b",
+      "color_success_message": "#82b875",
+      "color_error_message": "#b6534c",
+      "color_contrast_input_inactive_text": "#ebd8d3",
+      "color_navigation_text": "#534540",
+      "color_navigation_bg": "#fcf7ee",
+      "color_navigation_feature": "#f0e8d9",
+      "color_drawer_input_inactive_text": "#ebd8d3",
+      "color_quick_search_highlight": "#ffe898",
+      "color_navigation_border": "#e2e2e2",
+      "color_navigation_icon": "#aaaaaa",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "text": "Announce something here",
+                "link": "",
+                "background_color": "",
+                "text_color": "#ffffff"
+              }
+            },
+            "1602188457696": {
+              "type": "announcement",
+              "settings": {
+                "text": "You can cycle through multiple announcements",
+                "link": "",
+                "background_color": "#ae8979",
+                "text_color": "#ffffff"
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0",
+            "1602188457696"
+          ],
+          "settings": {
+            "announcement_bar_timing": 5
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "header_style": "default",
+            "nav_alignment": "left",
+            "detect_menu_length": false,
+            "show_locale_selector": false,
+            "show_currency_selector": true,
+            "logo": "",
+            "logo_max_size": 150,
+            "menu": "main-menu",
+            "transparent_index_header_enabled": true,
+            "transparent_logo": "",
+            "transparent_header_foreground_color": "#ffffff",
+            "transparent_header_border_color": "#ffffff",
+            "transparent_header_border_opacity": 10
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1602297933570": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>"
+              }
+            },
+            "1602015986783": {
+              "type": "link_list",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "1605557765620": {
+              "type": "link_list",
+              "settings": {
+                "menu": "main-menu"
+              }
+            },
+            "footer-1": {
+              "type": "newsletter",
+              "settings": {
+                "subheading": "<p>Subscribe to our mailing list. We only send emails once a month and only about good things.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "1602297933570",
+            "1602015986783",
+            "1605557765620",
+            "footer-1"
+          ],
+          "settings": {
+            "show_headings": true,
+            "show_payment_icons": true,
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        }
+      },
+      "content_for_index": [
+
+      ]
+    },
+    "Modern": {
+      "color_accent": "#c47961",
+      "color_text": "#1b1b1b",
+      "color_bg": "#ffffff",
+      "color_button": "#f4f4f4",
+      "color_border": "#dedede",
+      "color_input_text": "#8b8b8b",
+      "color_icon": "#b1b1b1",
+      "color_header_text": "#1b1b1b",
+      "color_header_bg": "#ffffff",
+      "color_header_border": "#dedede",
+      "color_footer_text": "#ffffff",
+      "color_footer_bg": "#253734",
+      "color_footer_border": "#465552",
+      "color_footer_button_background": "#324340",
+      "color_footer_button_text": "#ffffff",
+      "color_contrast_text": "#363636",
+      "color_contrast_bg": "#f9f9f9",
+      "color_contrast_border": "#e2e2e2",
+      "color_contrast_input_text": "#838383",
+      "color_contrast_icon": "#919191",
+      "color_drawer_text": "#1b1b1b",
+      "color_drawer_bg": "#ffffff",
+      "color_drawer_border": "#dadada",
+      "color_drawer_input_text": "#919191",
+      "color_drawer_icon": "#b1b1b1",
+      "font_heading": "electra_n7",
+      "size_heading": 18,
+      "uppercase_headings": false,
+      "font_body": "neue_haas_unica_n4",
+      "size_body": 14,
+      "font_logo": "electra_n7",
+      "logo_uppercase": true,
+      "font_logo_size": 22,
+      "font_button_size": 12,
+      "font_button_letter_spacing": 1,
+      "uppercase_buttons": true,
+      "button_shape": "0",
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_snapchat_link": "",
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "search_max_result_size": 4,
+      "search_show_products": true,
+      "search_show_articles": true,
+      "search_show_pages": true,
+      "search_show_price": true,
+      "search_show_vendor": false,
+      "swatch_options": "",
+      "chip_options": "",
+      "cart_quick_shop_enabled": true,
+      "cart_quick_shop_show_quantity_input": false,
+      "cart_notes_enable": true,
+      "quick_cart_note": "Your subtotal today is [subtotal]. Shipping and taxes will calculated at checkout.",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#197bbd",
+      "checkout_button_color": "#197bbd",
+      "checkout_error_color": "#e32c2b",
+      "color_input_inactive_text": "#8b8b8b",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "text": "Announce something here",
+                "link": "",
+                "background_color": "#203a36",
+                "text_color": "#ffffff"
+              }
+            },
+            "51c6b612-4c82-4885-b651-5b184c8665ff": {
+              "type": "announcement",
+              "settings": {
+                "text": "Cycle through multiple messages",
+                "link": "",
+                "background_color": "#203a36",
+                "text_color": "#ffffff"
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0",
+            "51c6b612-4c82-4885-b651-5b184c8665ff"
+          ],
+          "settings": {
+            "announcement_bar_timing": 5
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "header_style": "default",
+            "nav_alignment": "left",
+            "detect_menu_length": false,
+            "show_locale_selector": false,
+            "show_currency_selector": true,
+            "logo": "",
+            "logo_max_size": 150,
+            "menu": "main-menu",
+            "transparent_index_header_enabled": true,
+            "transparent_logo": "",
+            "transparent_header_foreground_color": "#ffffff",
+            "transparent_header_border_color": "#ffffff",
+            "transparent_header_border_opacity": 10
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1602297933570": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>"
+              }
+            },
+            "1602015986783": {
+              "type": "link_list",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "1605557765620": {
+              "type": "link_list",
+              "settings": {
+                "menu": "main-menu"
+              }
+            },
+            "footer-1": {
+              "type": "newsletter",
+              "settings": {
+                "subheading": "<p>Subscribe to our mailing list. We only send emails once a month and only about good things.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "1602297933570",
+            "1602015986783",
+            "1605557765620",
+            "footer-1"
+          ],
+          "settings": {
+            "show_headings": true,
+            "show_payment_icons": true,
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        }
+      },
+      "content_for_index": [
+
+      ]
+    }
+  }
+}

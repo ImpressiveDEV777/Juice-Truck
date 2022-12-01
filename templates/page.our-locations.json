@@ -1,0 +1,139 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_max_width": 500
+      }
+    },
+    "164633727122d7d88f": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1646337271599cdb4c-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Exterior_0H1A5912-TheMain.jpg",
+            "column_bg": "",
+            "column_txt_color": "",
+            "image_max_width": 100,
+            "title": "",
+            "title_size": 24,
+            "subheading": "<p><strong>THE MAIN ST CAFE<br\/><br\/><\/strong>4236 Main St <br\/>Vancouver, BC <br\/>V5V 2H1<\/p><p><a href=\"https:\/\/goo.gl\/maps\/wyZnWEFqwcAuHEq47\" title=\"https:\/\/goo.gl\/maps\/wyZnWEFqwcAuHEq47\">VIEW MAP<\/a><\/p><p>604-620-6768<br\/>Mon-Fri: 9am–6pm <\/p><p>Sat & Sun: 9:30am-5:30pm<\/p>",
+            "text_max_width": 80,
+            "link": "shopify:\/\/pages\/mainstreet-marketplace",
+            "link_text": ""
+          }
+        },
+        "1646337271599cdb4c-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0H1A9321-Cambie-02.jpg",
+            "column_bg": "",
+            "column_txt_color": "",
+            "image_max_width": 100,
+            "title": "",
+            "title_size": 40,
+            "subheading": "<p><strong>WHOLE FOODS - CAMBIE<\/strong><\/p><p>510 W 8TH Ave <br\/>Vancouver, BC <br\/>V5Z 1C5<\/p><p><a href=\"https:\/\/goo.gl\/maps\/ijDQhxCb9MuYDNSi9\" title=\"https:\/\/goo.gl\/maps\/ijDQhxCb9MuYDNSi9\">VIEW MAP<\/a><\/p><p>604-873-6110<br\/>Mon–Sun: 8am–7:00pm<br\/><\/p>",
+            "text_max_width": 36,
+            "link": "shopify:\/\/pages\/wholefoods-cambie",
+            "link_text": ""
+          }
+        },
+        "1646337271599cdb4c-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0H1A9353-Burnaby.jpg",
+            "column_bg": "",
+            "column_txt_color": "",
+            "image_max_width": 100,
+            "title": "",
+            "title_size": 40,
+            "subheading": "<p><strong>WHOLE FOODS - BURNABY<\/strong><\/p><p>4420 Lougheed Hwy<br\/> Burnaby, BC <br\/>V5C3Z3<\/p><p><a href=\"https:\/\/goo.gl\/maps\/xTJLgQPCbC1rJX9b8\" title=\"https:\/\/goo.gl\/maps\/xTJLgQPCbC1rJX9b8\">VIEW MAP<\/a><\/p><p>604-268-1548<br\/>Mon–Fri: 9:00am–5:30pm <br\/>Sat & Sun: 9:00am-7:00pm<\/p>",
+            "text_max_width": 36,
+            "link": "shopify:\/\/pages\/wholefoods-burnaby",
+            "link_text": ""
+          }
+        },
+        "879bf911-baae-41e7-9667-3fa621098fe2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Exterior_0H1A5956-Steveston-02.jpg",
+            "column_bg": "",
+            "column_txt_color": "",
+            "image_max_width": 100,
+            "title": "",
+            "title_size": 40,
+            "subheading": "<p><strong>THE STEVESTON CAFE<\/strong><\/p><p>12151 First Ave <br\/>Richmond, BC <br\/>V7E 3M1<\/p><p><a href=\"https:\/\/goo.gl\/maps\/j3sEtohZe35ooGYN6\" title=\"https:\/\/goo.gl\/maps\/j3sEtohZe35ooGYN6\">VIEW MAP<\/a><\/p><p>604-285-5404<br\/>Mon–Fri: 8:30am–5pm<br\/>Sat–Sun: 9am–5pm<\/p>",
+            "text_max_width": 80,
+            "link": "shopify:\/\/pages\/steveston",
+            "link_text": ""
+          }
+        },
+        "a1eabe1c-eba9-4878-a857-f3b822d8e717": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_6_d0d6f976-b025-4d77-a918-848c6cd8fa89.jpg",
+            "column_bg": "",
+            "column_txt_color": "",
+            "image_max_width": 100,
+            "title": "",
+            "title_size": 40,
+            "subheading": "<p><strong>THE CAFE - MOUNT PLEASANT<\/strong><\/p><p>28 W 5th Ave <br\/>Vancouver, BC <br\/>V5Y 1H5<\/p><p><a href=\"https:\/\/goo.gl\/maps\/7tr4zx9WnhRuh3Fs8\" title=\"https:\/\/goo.gl\/maps\/7tr4zx9WnhRuh3Fs8\">VIEW MAP<\/a><\/p><p>604-260-6943<br\/>Mon–Fri: 9am-5:30pm<br\/>Sat: 10:00am-5:00pm<br\/>Sun: 10:00am-4:00pm<\/p>",
+            "text_max_width": 36,
+            "link": "shopify:\/\/pages\/west-5th",
+            "link_text": ""
+          }
+        },
+        "9be31c75-d641-4a89-b9af-df8f82142ca9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JuiceTruck_49754-Yaletown.jpg",
+            "column_bg": "",
+            "column_txt_color": "",
+            "image_max_width": 100,
+            "title": "",
+            "title_size": 40,
+            "subheading": "<p><strong>THE YALETOWN CAFE<\/strong><\/p><p>1022 Mainland Street<br\/>Vancouver, BC <br\/>V6B 2T5<\/p><p><a href=\"https:\/\/goo.gl\/maps\/6xpbBt8JmvxbeZfY8\" title=\"https:\/\/goo.gl\/maps\/6xpbBt8JmvxbeZfY8\">VIEW MAP<\/a><\/p><p>604-428-7825<br\/>Mon–Fri: 9am–5pm<br\/>Sat: 10am–5pm<br\/>Sun: 10am-4pm<\/p>",
+            "text_max_width": 36,
+            "link": "shopify:\/\/pages\/yaletown",
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "1646337271599cdb4c-0",
+        "1646337271599cdb4c-1",
+        "1646337271599cdb4c-2",
+        "879bf911-baae-41e7-9667-3fa621098fe2",
+        "a1eabe1c-eba9-4878-a857-f3b822d8e717",
+        "9be31c75-d641-4a89-b9af-df8f82142ca9"
+      ],
+      "settings": {
+        "section_style": "default",
+        "columns": 3,
+        "overline": "",
+        "title": "Locations",
+        "title_size": 96,
+        "title_color": "#e9485d",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "text_alignment": "left",
+        "column_alignment": "left",
+        "text_max_width": 50
+      }
+    },
+    "1646337600215a59a2": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<!-- Start Stockist.co widget -->\n<div data-stockist-widget-tag=\"u8837\">Loading store locator\nfrom <a href=\"https:\/\/stockist.co\">Stockist store locator<\/a>...<\/div>\n<script>\n  (function(s,t,o,c,k){c=s.createElement(t);c.src=o;c.async=1;\n  k=s.getElementsByTagName(t)[0];k.parentNode.insertBefore(c,k);\n  })(document,'script','\/\/stockist.co\/embed\/v1\/widget.min.js');\n<\/script>\n<!-- End Stockist.co widget -->"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "164633727122d7d88f",
+    "1646337600215a59a2"
+  ]
+}

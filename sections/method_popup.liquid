@@ -1,0 +1,87 @@
+<div class="methodModal_container">
+  <div id="methodModal"  class="">
+    <div class="close_method_modal">{% render 'icon-close' %}</div>
+    <h6 class="type-heading-1">{{ section.settings.modal_title }}</h6>
+    <div class="method_selector">
+      <div class="local">
+        {{ section.settings.method1_title }}
+        <span>({{ section.settings.method1_detail }})</span>
+        <input type="text" id="postalcode" name="postalcode" value="" placeholder="Enter Postal Code">
+        <button class="confirm button2 bttn">confirm</button>
+        <p class="post_alert">{{ settings.method1_alert }}</p>
+      </div>
+      <div class="shipping">
+        {{ section.settings.method2_title }}
+        <span>({{ section.settings.method2_detail }})</span>
+      </div>
+      <div class="pickup">
+        {{ section.settings.method3_title }}
+        <span>({{ section.settings.method3_detail }})</span>
+      </div>
+    </div>
+    <p class="browsing">{{ section.settings.browsing_text }}</p>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Method Modal",
+    "settings": [
+	  {
+		"type": "text",
+		"id": "modal_title",
+		"label": "Modal Title",
+		"default": "select shipping method"
+	  },
+	  {
+		"type": "text",
+		"id": "method1_title",
+		"label": "Method1 Title",
+		"default": "delivery"
+	  },
+	  {
+		"type": "text",
+		"id": "method1_detail",
+		"label": "Method1 Detail",
+		"default": "Lower Mainland"
+	  },
+	  {
+		"type": "text",
+		"id": "method2_title",
+		"label": "Method2 Title",
+		"default": "shipping"
+	  },
+	  {
+		"type": "text",
+		"id": "method2_detail",
+		"label": "Method2 Detail",
+		"default": "World-Wide"
+	  },
+	  {
+		"type": "text",
+		"id": "method3_title",
+		"label": "Method3 Title",
+		"default": "pick up"
+	  },
+	  {
+		"type": "text",
+		"id": "method3_detail",
+		"label": "Method3 Detail",
+		"default": "at W 5th Avenue"
+	  },
+  	  {
+  		"type": "text",
+  		"id": "browsing_text",
+  		"label": "Browsing text",
+  		"default": "I'm just browsing"
+  	  }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

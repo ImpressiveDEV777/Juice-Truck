@@ -1,0 +1,187 @@
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+
+<div class="quick-shop__details">
+  <div class="quick-shop__heading">
+    <div class="quick-shop__image" data-product-image-wrapper>
+      <a href="{{ product.url }}">
+        {% if current_variant.featured_image %}
+          {% render 'image' with image: current_variant.featured_image %}
+        {% else %}
+            {% render 'image' with image: product.featured_image %}
+        {% endif %}
+      </a>
+    </div>
+    <div class="quick-shop__product-details">
+      <h3 class="quick-shop__product-title ma0">
+        {% if is_placeholder %}
+          {{ 'homepage.onboarding.product_title' | t }}
+        {% else %}
+          <a href="{{ product.url }}">{{ product.title }}</a>
+        {% endif %}
+      </h3>
+      <div data-price-wrapper>
+        <span class="quick-shop__product-price-wrapper">
+          <span data-product-price class="quick-shop__product-price">
+            {% if is_placeholder %}
+              {{ 'homepage.onboarding.product_price' | t }}
+            {% else %}
+              {{ current_variant.price | money }}
+            {% endif %}
+          </span>
+
+          <span class="visually-hidden" data-compare-text>{{ 'products.product.regular_price' | t }}</span>
+          <s class="meta" data-compare-price>
+            {% if current_variant.compare_at_price > current_variant.price %}
+              {{ current_variant.compare_at_price | money }}
+            {% endif %}
+          </s>
+        </span>
+
+        {% render 'unit-price' item: current_variant %}
+      </div>
+    </div>
+  </div>
+
+  <div>
+    {% if product != blank %}
+      {% assign enable_ajax = settings.enable_ajax %}
+
+      {% form 'product',
+        product,
+        novalidate: 'novalidate',
+        data-product-form: '',
+        data-product-handle: product.handle,
+        data-ajax-enabled: enable_ajax
+      %}
+        {% unless product.has_only_default_variant %}
+          {% for option in product.options_with_values %}
+            <div class="js-enabled quick-shop__option">
+
+                <label for="QuickShopOption{{ option.position }}--{{ product.handle }}">
+                  {{ option.name }}
+                </label>
+
+
+                {% comment %}
+                  All inputs that have `name=options[Name]` will be picked up by
+                  ProductForm, registered as an option input, and made available
+                  at ProductForm.optionsInputs
+                {% endcomment %}
+                <div class="select-wrapper">
+                  <select
+                    id="QuickShopOption{{ option.position }}--{{ product.handle }}"
+                    name="options[{{ option.name | escape }}]"
+                    class="input-reset input w-100"
+                  >
+                    {% for value in option.values %}
+                      <option
+                        value="{{ value | escape }}"
+                        {% if option.selected_value == value %}selected="selected"{% endif %}>
+                          {{ value }}
+                      </option>
+                    {% endfor %}
+                  </select>
+                  {% render 'icon-chevron-down' %}
+                </div>
+            </div>
+          {% endfor %}
+        {% endunless %}
+
+        {% if product.selling_plan_groups.size > 0 %}
+          <div class="quick-shop__option">
+            <label for="QuickShopPlans--{{ product.handle }}">{{ 'general.products.selling_plan_options' | t }}</label>
+            <div class="select-wrapper">
+              <select name="selling_plan" id="QuickShopPlans--{{ product.handle }}" class="input-reset input w-100">
+                <option value="">{{ 'general.products.selling_plan_one_time' | t }}</option>
+                {% for variant in product.variants %}
+                  <optgroup label="{{ variant.title }}">
+                    {% for allocation in variant.selling_plan_allocations %}
+                      <option value="{{ allocation.selling_plan.id }}">
+                        {{ allocation.selling_plan.name }}
+                      </option>
+                    {% endfor %}
+                  </optgroup>
+                {% endfor %}
+              </select>
+              {% render 'icon-chevron-down' %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% comment %}
+          In order for this form to submit, it needs to contain an input with name="id".
+          ProductForm() will automatically create this input (or make sure it has the
+          right value set if it already exists) on form submit based on the
+          currently selected variant. However, if JS is disabled we need a fallback.
+
+          Include a single <select> element which allows users to select all variants
+          as a fallback and present it only when JS is disabled. In addition,
+          make sure you hide the option inputs declared above, like we do with the
+          `.js-enabled` class which only shows its contents when JS is enabled.
+        {% endcomment %}
+        <select data-variant-select name="id">
+          {% for variant in product.variants %}
+            <option
+              {% if variant == current_variant %}selected="selected"{% endif %}
+              {% unless variant.available %}disabled="disabled"{% endunless %}
+              value="{{ variant.id }}">
+                {{ variant.title }}
+            </option>
+          {% endfor %}
+        </select>
+
+
+        {% comment %}
+          Any input with `name="quantity"` will be picked up by ProductForm and
+          registered as a quantity input. If a quantity input is not included, a
+          default quantity of 1 is assumed.
+        {% endcomment %}
+          {%- if settings.cart_quick_shop_show_quantity_input -%}
+            <div class="quick-shop__input">
+              <label for="QuickShopQuantity" class="dib mb2">{{ 'products.product.quantity' | t }}</label>
+              <input type="number" id="QuickShopQuantity--{{ product.handle }}" name="quantity" value="01" min="1" class="input-reset input w-100">
+            </div>
+            <div class="quick-shop__input-error hidden" data-quantity-error>
+              {{ 'products.product.quantity_error' | t }}
+            </div>
+          {%- endif -%}
+
+        <button
+          type="submit"
+          class="bttn bttn--full quick-shop__add-to-cart-button bttn bttn-full"
+          data-add-to-cart
+          data-lang-available="{{ 'products.product.add_to_cart' | t }}"
+          data-lang-sold-out="{{ 'products.product.sold_out' | t }}"
+          data-lang-unavailable="{{ 'products.product.unavailable' | t }}"
+          {% unless current_variant.available %}disabled="disabled"{% endunless %}
+        >
+
+          <span class="bttn__spinner">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              width="20px" height="20px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <path fill="currentColor" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+              <animateTransform attributeType="xml"
+                attributeName="transform"
+                type="rotate"
+                from="0 25 25"
+                to="360 25 25"
+                dur="0.6s"
+                repeatCount="indefinite"/>
+              </path>
+            </svg>
+          </span>
+
+          <span data-add-to-cart-text>
+            {% if current_variant.available %}
+              {{ 'products.product.add_to_cart' | t }}
+            {% else %}
+              {{ 'products.product.sold_out' | t }}
+            {% endif %}
+          </span>
+
+        </button>
+      {% endform %}
+
+    {% endif %}
+  </div>
+</div>

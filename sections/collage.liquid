@@ -1,0 +1,427 @@
+{% liquid
+  assign id = section.id
+  assign section_style = section.settings.section_style
+  assign heading_alignment = section.settings.heading_alignment
+  assign overline = section.settings.overline
+  assign heading = section.settings.title
+  assign subheading = section.settings.subheading
+  assign text_max_width = section.settings.text_max_width
+  assign blocks = section.blocks
+%}
+
+{% assign modifiers = '' %}
+
+{% assign modifiers = modifiers | append: ' section--' | append: section_style %}
+
+{% unless section_style == 'contrast' %}
+  {% assign modifiers = modifiers | append: ' section--bordered' %}
+{% endunless %}
+
+<section
+  data-section-id="{{ id }}"
+  data-section-type="collage"
+  class="section {{ modifiers }}"
+>
+
+  {% render 'text-block' with
+    id: id,
+    modifiers: 'mb5 animation__staggered-children-fade-in',
+    heading_alignment: heading_alignment,
+    text_max_width: text_max_width,
+    overline: overline,
+    heading: heading,
+    subheading: subheading
+  %}
+
+  <div class="collage">
+
+    {% for block in blocks %}
+      {% liquid 
+        assign text_color = block.settings.text_color
+        assign text_container_color = block.settings.text_container_color
+        assign button_text_color = block.settings.button_text_color
+        assign button_border_color = block.settings.button_border_color
+        assign focal_alignment = block.settings.focal_point | replace: "_", " "
+      %}
+
+      {% assign s = block.settings %}
+      {%- assign image = block.value | default: s.image  -%}
+
+      {% assign parent_block_is_link = false %}
+
+      {% if s.link != blank and s.link_text == blank %}
+        {% assign parent_block_is_link = true %}
+        <a href="{{ s.link }}" class="collage__item animates collage__item--{{ s.size }}" {{ block.shopify_attributes }} data-index="{{ forloop.index0 }}">
+      {% else %}
+        <div
+          class="collage__item animates collage__item--{{ s.size }}{% if s.image == blank %} collage__item--has-placeholder{% endif %}"
+          {{ block.shopify_attributes }}
+          data-index="{{ forloop.index0 }}"
+        >
+      {% endif %}
+
+          <div class="collage__item-inner-wrapper" style="--media-focal-alignment:  {{ focal_alignment }};">
+            {% unless s.video_url == blank %}
+              {% assign button_alignment = 'right' %}
+              {% if s.alignment == 'right_top' %}
+                {% assign button_alignment = 'left' %}
+              {% endif %}
+              {% render 'video-pause', alignment: button_alignment %}
+            {% endunless %}
+
+            <div
+              data-bgset="{% render 'responsive-bg-image', image: image %}"
+              role="img"
+              aria-label="{{ image.alt }}"
+              class="collage__item-inner lazyload"
+              {% unless s.image == blank %}
+                style="background-image: url({{ s.image | img_url: '700x' }});"
+              {% endunless %}
+            >
+              {% unless s.video_url == blank %}
+                <video class="collage__video" autoplay playsinline loop muted src="{{ s.video_url }}"></video>
+              {% endunless %}
+
+              {% if s.image == blank and s.video_url == blank %}
+                <div class="collage__placeholder">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+              {% endif %}
+            </div>
+
+            {% if s.overline != blank or s.heading != blank or s.subheading != blank or s.link_text != blank %}
+              {% render 'overlay' with
+                section_id: id,
+                id: block.id
+                overlay_opacity: s.overlay_opacity,
+                overlay_color: s.overlay_color,
+
+                text_container_color: text_container_color,
+                alignment: s.alignment,
+                overline: s.overline,
+                heading: s.heading,
+                subheading: s.subheading,
+                text_color: text_color,
+                text_max_width: s.text_max_width,
+
+
+                parent_block_is_link: parent_block_is_link,
+                link: s.link,
+                link_label: s.link_text,
+                link_text_color: button_text_color
+                link_border_color: button_border_color
+              %}
+            {% endif %}
+          </div>
+
+        {% render 'text-block',
+          id: id,
+          modifiers: 'mb3 mt3',
+          heading_alignment: 'left',
+          text_max_width: text_max_width,
+          overline: s.overline,
+          heading: s.heading,
+          subheading: s.subheading,
+          link: s.link,
+          link_text: s.link_text,
+        %}
+
+      {% if s.link != blank and s.link_text == blank %}
+        </a>
+      {% else %}
+        </div>
+      {% endif %}
+    {% endfor %}
+
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "t:sections.mosaic_grid.name",
+    "class": "section-dynamic section-borderable",
+    "max_blocks": 9,
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:sections.mosaic_grid.settings.style_header.content"
+      },
+      {
+        "type": "select",
+        "id": "section_style",
+        "label": "t:sections.mosaic_grid.settings.section_style.label",
+        "default": "default",
+        "options": [
+          {
+            "value": "default",
+            "label": "t:sections.mosaic_grid.settings.section_style.option_1"
+          },
+          {
+            "value": "contrast",
+            "label": "t:sections.mosaic_grid.settings.section_style.option_2"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "t:sections.mosaic_grid.settings.content_header.content"
+      },
+      {
+        "type": "text",
+        "id": "overline",
+        "label": "t:sections.mosaic_grid.settings.overline.label",
+        "default": "Mosaic grid"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "t:sections.mosaic_grid.settings.title.label",
+        "default": "Mosaic grid section"
+      },
+      {
+        "type": "richtext",
+        "id": "subheading",
+        "label": "t:sections.mosaic_grid.settings.subheading.label",
+        "default": "<p>The collage section is perfect for lookbooks or for showcasing a series of particularly excellent editorial images.</p>"
+      },
+      {
+        "type": "select",
+        "id": "heading_alignment",
+        "label": "t:sections.mosaic_grid.settings.heading_alignment.label",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.mosaic_grid.settings.heading_alignment.option_1"
+          },
+          {
+            "value": "center",
+            "label": "t:sections.mosaic_grid.settings.heading_alignment.option_2"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "text_max_width",
+        "label": "t:sections.mosaic_grid.settings.text_max_width.label",
+        "min": 16,
+        "max": 50,
+        "step": 1,
+        "default": 36
+      }
+    ],
+    "max_blocks": 10,
+    "blocks": [
+      {
+        "type": "grid_item",
+        "name": "t:sections.mosaic_grid.blocks.grid_item.name",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:sections.mosaic_grid.blocks.grid_item.settings.image.label"
+          },
+          {
+            "id": "focal_point",
+            "type": "select",
+            "label": "t:sections.mosaic_grid.blocks.grid_item.settings.focal_point.label",
+            "options": [
+              { "label": "t:sections.mosaic_grid.blocks.grid_item.settings.focal_point.options__1.label", "value": "left_top" },
+              { "label": "t:sections.mosaic_grid.blocks.grid_item.settings.focal_point.options__2.label", "value": "center_top" },
+              { "label": "t:sections.mosaic_grid.blocks.grid_item.settings.focal_point.options__3.label", "value": "right_top" },
+              { "label": "t:sections.mosaic_grid.blocks.grid_item.settings.focal_point.options__4.label", "value": "left_center" },
+              { "label": "t:sections.mosaic_grid.blocks.grid_item.settings.focal_point.options__5.label", "value": "center_center" },
+              { "label": "t:sections.mosaic_grid.blocks.grid_item.settings.focal_point.options__6.label", "value": "right_center" },
+              { "label": "t:sections.mosaic_grid.blocks.grid_item.settings.focal_point.options__7.label", "value": "left_bottom" },
+              { "label": "t:sections.mosaic_grid.blocks.grid_item.settings.focal_point.options__8.label", "value": "center_bottom" },
+              { "label": "t:sections.mosaic_grid.blocks.grid_item.settings.focal_point.options__9.label", "value": "right_bottom" }
+            ],
+            "default": "center_center"
+          },
+          {
+            "type": "url",
+            "id": "video_url",
+            "label": "t:sections.mosaic_grid.blocks.grid_item.settings.video_url.label",
+            "info": "t:sections.mosaic_grid.blocks.grid_item.settings.video_url.info"
+          },
+          {
+            "type": "select",
+            "id": "size",
+            "label": "t:sections.mosaic_grid.blocks.grid_item.settings.size.label",
+            "options": [
+              { "value": "small", "label": "t:sections.mosaic_grid.blocks.grid_item.settings.size.option_1" },
+              { "value": "vertical", "label": "t:sections.mosaic_grid.blocks.grid_item.settings.size.option_2" },
+              { "value": "horizontal", "label": "t:sections.mosaic_grid.blocks.grid_item.settings.size.option_3" },
+              { "value": "large", "label": "t:sections.mosaic_grid.blocks.grid_item.settings.size.option_4" }
+            ],
+            "default": "small"
+          },
+          {
+            "type": "range",
+            "id": "overlay_opacity",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "default": 10,
+            "label": "t:sections.mosaic_grid.blocks.grid_item.settings.overlay_opacity.label"
+          },
+          {
+            "type": "color",
+            "id": "overlay_color",
+            "label": "t:sections.mosaic_grid.blocks.grid_item.settings.overlay_color.label",
+            "default": "#000000"
+          },
+          {
+            "type": "text",
+            "id": "overline",
+            "label": "t:sections.mosaic_grid.blocks.grid_item.settings.overline.label"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "t:sections.mosaic_grid.blocks.grid_item.settings.heading.label"
+          },
+          {
+            "type": "richtext",
+            "id": "subheading",
+            "label": "t:sections.mosaic_grid.blocks.grid_item.settings.subheading.label"
+          },
+          {
+            "id": "alignment",
+            "type": "select",
+            "label": "t:sections.mosaic_grid.blocks.grid_item.settings.alignment.label",
+            "options": [
+              {
+                "value": "left_top", 
+                "label": "t:sections.mosaic_grid.blocks.grid_item.settings.alignment.option_1" 
+              },
+              {
+                "value": "center_top", 
+                "label": "t:sections.mosaic_grid.blocks.grid_item.settings.alignment.option_2" 
+              },
+              {
+                "value": "right_top", 
+                "label": "t:sections.mosaic_grid.blocks.grid_item.settings.alignment.option_3" 
+              },
+              {
+                "value": "left_center", 
+                "label": "t:sections.mosaic_grid.blocks.grid_item.settings.alignment.option_4" 
+              },
+              {
+                "value": "center_center", 
+                "label": "t:sections.mosaic_grid.blocks.grid_item.settings.alignment.option_5" 
+              },
+              {
+                "value": "right_center", 
+                "label": "t:sections.mosaic_grid.blocks.grid_item.settings.alignment.option_6" 
+              },
+              {
+                "value": "left_bottom", 
+                "label": "t:sections.mosaic_grid.blocks.grid_item.settings.alignment.option_7" 
+              },
+              {
+                "value": "center_bottom", 
+                "label": "t:sections.mosaic_grid.blocks.grid_item.settings.alignment.option_8" 
+              },
+              {
+                "value": "right_bottom", 
+                "label": "t:sections.mosaic_grid.blocks.grid_item.settings.alignment.option_9" 
+              }
+            ],
+            "default": "left_center"
+          },
+          {
+            "type": "range",
+            "id": "text_max_width",
+            "label": "t:sections.mosaic_grid.blocks.grid_item.settings.text_max_width.label",
+            "min": 16,
+            "max": 50,
+            "step": 1,
+            "default": 36
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "t:sections.mosaic_grid.blocks.grid_item.settings.link.label"
+          },
+          {
+            "type": "text",
+            "id": "link_text",
+            "label": "t:sections.mosaic_grid.blocks.grid_item.settings.link_text.label"
+          },
+          {
+            "type": "color",
+            "id": "text_color",
+            "label": "t:sections.mosaic_grid.settings.text_color.label",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "text_container_color",
+            "label": "t:sections.mosaic_grid.settings.text_container_color.label",
+            "default": "#ffffff",
+            "info": "Optional"
+          },
+          {
+            "type": "color",
+            "id": "button_text_color",
+            "label": "t:sections.mosaic_grid.settings.button_text_color.label",
+            "default": "#1b1b1b"
+          },
+          {
+            "type": "color",
+            "id": "button_border_color",
+            "label": "t:sections.mosaic_grid.settings.button_border_color.label",
+            "default": "#dedede"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.mosaic_grid.presets.mosaic_grid.name",
+        "category": "Image",
+        "blocks": [
+          {
+            "type": "grid_item",
+            "settings": {
+              "size": "vertical",
+              "heading": "This is a large vertical block",
+              "subheading": "<p>Mix and match between large portrait blocks and small landscape blocks.</p>",
+              "text_max_width": 32,
+              "alignment": "left_top"
+            }
+          },
+          {
+            "type": "grid_item",
+            "settings": {
+              "size": "small",
+              "heading": "This is a small block",
+              "subheading": "<p>Try adding two small blocks before and after two large blocks for an asymmetrical mosaic effect.</p>",
+              "text_max_width": 32,
+              "alignment": "left_bottom"
+            }
+          },
+          {
+            "type": "grid_item",
+            "settings": {
+              "size": "small",
+              "heading": "This is a small block",
+              "subheading": "<p>Try adding two small blocks before and after two large blocks for an asymmetrical mosaic effect.</p>",
+              "text_max_width": 32,
+              "alignment": "left_bottom"
+            }
+          },
+          {
+            "type": "grid_item",
+            "settings": {
+              "size": "horizontal",
+              "heading": "Have control over your content",
+              "subheading": "<p>Each block has text placement and max width options so you can fine tune your message and balance it with your imagery.</p>",
+              "text_max_width": 32,
+              "alignment": "right_bottom"
+            }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

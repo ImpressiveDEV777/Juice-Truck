@@ -1,0 +1,50 @@
+{%- assign depth = 1 -%}
+
+{%- for link in links -%}
+  {%- assign has_children = false -%}
+  {%- if link.levels > 0 -%}
+    {%- assign has_children = true -%}
+  {%- endif -%}
+
+  {%- capture sub_nav_id -%}drawer-sub-menu--{{ link.title | handle }}{%- endcapture -%}
+  {%- if parent -%}
+    {%- capture sub_nav_id -%}drawer-sub-menu--{{ parent.title | handle }}-{{ link.title | handle }}{%- endcapture -%}
+  {%- endif -%}
+
+  <li class="drawer-menu__item {% if link.title == "Delivery" %} delivery_mob{% endif %}{% if link.title contains "Mainland" %} postal_mob{% endif %}{% if link.title contains "Shipping" %} shipping_mob{% endif %}{% if link.title contains "Pick" %} pickup_mob{% endif %}" data-list-item>
+    <a
+      {% unless link.title contains "Mainland" or link.title contains "Shipping" or link.title contains "Pick" %}data-item="{% if has_children %}parent{% else %}link{% endif %}"{% endunless %}
+      class="drawer-menu__link {% if has_children %}no-transition{% endif %}"
+      {% unless link.title contains "Mainland" or link.title contains "Shipping" or link.title contains "Pick" %}href="{{ link.url }}"{% endunless %}
+      {% if has_children %}
+        data-link="primary"
+        aria-expanded="false"
+        aria-controls="{{ sub_nav_id }}"
+      {% endif %}
+    >
+      <span>{{ link.title }}</span>
+      {%- if has_children -%}
+        {% render 'icon-chevron-right' %}
+      {%- endif -%}
+    </a>
+    {% if link.title contains "Mainland" %}
+    <div class="postalinput_mob">
+      <input type="text" id="postalcode_mob" name="postalcode" value="" placeholder="Enter Postal Code">
+      <button class="confirm_mob button2 bttn">confirm</button>
+    </div>
+    {% endif %}
+
+    {% comment %} Render sub navigation {% endcomment %}
+    {%- if link.links.size > 0 -%}
+      <ul class="drawer-menu__list drawer-menu__list--sub" data-height-reference id="{{ sub_nav_id }}">
+        <li class="drawer-menu__item drawer-menu__item--heading">
+          <a href="{{ link.url }}" class="drawer-menu__link" aria-label="{{ 'layout.navigation.back' | t }}" aria-controls="{{ sub_nav_id }}" data-heading="true" data-item="back">
+            <span>{{ link.title }}</span>
+            {% render 'icon-chevron-left' %}
+          </a>
+        </li>
+        {% render 'drawer-menu-list', links: link.links, parent: link %}
+      </ul>
+    {%- endif -%}
+  </li>
+{%- endfor -%}

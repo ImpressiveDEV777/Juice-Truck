@@ -1,0 +1,288 @@
+{% liquid
+  assign id = section.id
+  assign desktop_height = section.settings.desktop_height
+  assign mobile_height = section.settings.mobile_height
+  assign timer = section.settings.timer
+  assign slides = section.blocks
+  assign image_aspect = section.settings.image_aspect
+%}
+
+{% liquid
+  assign time_in_ms = timer | times: 1000
+%}
+
+<section
+  data-section-id="{{ section.id }}"
+  data-section-type="slideshow"
+  class="slideshow"
+  data-timer="{{ time_in_ms }}"
+  data-slide-count={{ slides.size }}
+  style="
+    --desktop-height: {{ desktop_height }}vh;
+    --mobile-height: {{ mobile_height }}vh;
+  "
+>
+  {%- if slides.size > 1 -%}
+    <div class="slideshow__nav visually-hidden">
+      <button
+        type="button"
+        class="slideshow__button slideshow__button-previous"
+        aria-label="{{ 'general.accessibility.carousel_previous' | t }}"
+        data-control="prev"
+      >
+        {{ 'general.accessibility.carousel_previous' | t }}
+      </button>
+      <button
+        class="slideshow__button slideshow__button-pause"
+        data-control="pause"
+        aria-label="{{ 'general.accessibility.pause' | t }}"
+      >
+        {{ 'general.accessibility.pause' | t }}
+      </button>
+      <button
+        type="button"
+        class="slideshow__button slideshow__button-next"
+        aria-label="{{ 'general.accessibility.carousel_next' | t }}"
+        data-control="next"
+      >
+        {{ 'general.accessibility.carousel_next' | t }}
+      </button>
+    </div>
+  {%- endif -%}
+
+  <div class="js-slideshow">
+    {% if slides.size == 2 %}
+      {% for i in (1..2) %}
+        {% render 'slideshow-blocks' with
+          id: id,
+          blocks: slides,
+          image_aspect: image_aspect
+        %}
+      {% endfor %}
+    {% else %}
+      {% render 'slideshow-blocks' with
+        id: id,
+        blocks: slides,
+        image_aspect: image_aspect
+      %}
+    {% endif %}
+  </div>
+
+  {% render 'page-dots', blocks: slides %}
+</section>
+
+
+{% schema %}
+  {
+    "name": "t:sections.slideshow.name",
+    "class": "section-dynamic",
+    "settings": [
+      {
+        "type": "radio",
+        "id": "image_aspect",
+        "label": "t:sections.slideshow.settings.image_aspect.label",
+        "options": [
+          { "value": "custom", "label": "t:sections.slideshow.settings.image_aspect.option_1" },
+          { "value": "original", "label": "t:sections.slideshow.settings.image_aspect.option_2" }
+        ],
+        "default": "custom"
+      },
+      {
+        "type": "range",
+        "id": "desktop_height",
+        "label": "t:sections.slideshow.settings.desktop_height.label",
+        "unit": "%",
+        "min": 50,
+        "max": 100,
+        "step": 5,
+        "default": 100
+      },
+      {
+        "type": "range",
+        "id": "mobile_height",
+        "label": "t:sections.slideshow.settings.mobile_height.label",
+        "unit": "%",
+        "min": 50,
+        "max": 100,
+        "step": 5,
+        "default": 100
+      },
+      {
+        "type": "paragraph",
+        "content": "t:sections.slideshow.settings.height_paragraph.content"
+      },
+      {
+        "id": "timer",
+        "type": "range",
+        "label": "t:sections.slideshow.settings.timer.label",
+        "default": 7,
+        "min": 5,
+        "max": 15,
+        "step": 1
+      }
+    ],
+    "max_blocks": 8,
+    "blocks": [
+      {
+        "type": "slide",
+        "name": "t:sections.slideshow.blocks.slide.name",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:sections.slideshow.blocks.slide.settings.image.label",
+            "info": "t:sections.slideshow.blocks.slide.settings.image.info"
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "t:sections.slideshow.blocks.slide.settings.mobile_image.label",
+            "info": "t:sections.slideshow.blocks.slide.settings.mobile_image.info"
+          },
+          {
+            "id": "focal_point",
+            "type": "select",
+            "label": "t:sections.slideshow.blocks.slide.settings.focal_point.label",
+            "options": [
+              { "label": "t:sections.slideshow.blocks.slide.settings.focal_point.options__1.label", "value": "left_top" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.focal_point.options__2.label", "value": "center_top" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.focal_point.options__3.label", "value": "right_top" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.focal_point.options__4.label", "value": "left_center" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.focal_point.options__5.label", "value": "center_center" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.focal_point.options__6.label", "value": "right_center" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.focal_point.options__7.label", "value": "left_bottom" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.focal_point.options__8.label", "value": "center_bottom" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.focal_point.options__9.label", "value": "right_bottom" }
+            ],
+            "default": "center_center"
+          },
+          {
+            "id": "mobile_focal_point",
+            "type": "select",
+            "label": "t:sections.slideshow.blocks.slide.settings.mobile_focal_point.label",
+            "options": [
+              { "label": "t:sections.slideshow.blocks.slide.settings.mobile_focal_point.options__1.label", "value": "left_top" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.mobile_focal_point.options__2.label", "value": "center_top" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.mobile_focal_point.options__3.label", "value": "right_top" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.mobile_focal_point.options__4.label", "value": "left_center" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.mobile_focal_point.options__5.label", "value": "center_center" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.mobile_focal_point.options__6.label", "value": "right_center" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.mobile_focal_point.options__7.label", "value": "left_bottom" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.mobile_focal_point.options__8.label", "value": "center_bottom" },
+              { "label": "t:sections.slideshow.blocks.slide.settings.mobile_focal_point.options__9.label", "value": "right_bottom" }
+            ],
+            "default": "center_center"
+          },
+          {
+            "type": "url",
+            "id": "video_url",
+            "label": "t:sections.slideshow.blocks.slide.settings.video_url.label",
+            "info": "t:sections.slideshow.blocks.slide.settings.video_url.info"
+          },
+          {
+            "type": "text",
+            "id": "overline",
+            "label": "t:sections.slideshow.blocks.slide.settings.overline.label"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "t:sections.slideshow.blocks.slide.settings.title.label",
+            "default": "This is your slideshow"
+          },
+          {
+            "type": "richtext",
+            "id": "subheading",
+            "label": "t:sections.slideshow.blocks.slide.settings.subheading.label",
+            "default": "<p>Use it to set your brand's tone and create a first impression with your customers. Vibrant imagery with a lot of background accent works well for a full-screen effect.</p>"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "t:sections.slideshow.blocks.slide.settings.link.label"
+          },
+          {
+            "type": "text",
+            "id": "link_text",
+            "label": "t:sections.slideshow.blocks.slide.settings.link_text.label",
+            "info": "t:sections.slideshow.blocks.slide.settings.link_text.info",
+            "default": "Shop now"
+          },
+          {
+            "type": "header",
+            "content": "t:sections.slideshow.blocks.slide.settings.style_header.content"
+          },
+          {
+            "type": "range",
+            "id": "overlay_opacity",
+            "label": "t:sections.slideshow.blocks.slide.settings.overlay_opacity.label",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "default": 50
+          },
+          {
+            "type": "color",
+            "id": "overlay_color",
+            "label": "t:sections.slideshow.blocks.slide.settings.overlay_color.label",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "text_container_color",
+            "label": "t:sections.slideshow.blocks.slide.settings.text_container_color.label",
+            "default": "transparent"
+          },
+          {
+            "type": "color",
+            "id": "text_color",
+            "label": "t:sections.slideshow.blocks.slide.settings.text_color.label",
+            "default": "#ffffff"
+          },
+          {
+            "type": "range",
+            "id": "text_max_width",
+            "label": "t:sections.slideshow.blocks.slide.settings.text_max_width.label",
+            "min": 16,
+            "max": 50,
+            "step": 1,
+            "default": 39
+          },
+          {
+            "type": "select",
+            "id": "horizontal_text_position",
+            "label": "t:sections.slideshow.blocks.slide.settings.horizontal_text_position.label",
+            "options": [
+              { "value": "left", "label": "t:sections.slideshow.blocks.slide.settings.horizontal_text_position.option_1" },
+              { "value": "center", "label": "t:sections.slideshow.blocks.slide.settings.horizontal_text_position.option_2" },
+              { "value": "right", "label": "t:sections.slideshow.blocks.slide.settings.horizontal_text_position.option_3" }
+            ],
+            "default": "center"
+          },
+          {
+            "type": "select",
+            "id": "vertical_text_position",
+            "label": "t:sections.slideshow.blocks.slide.settings.vertical_text_position.label",
+            "options": [
+              { "value": "top", "label": "t:sections.slideshow.blocks.slide.settings.vertical_text_position.option_1" },
+              { "value": "middle", "label": "t:sections.slideshow.blocks.slide.settings.vertical_text_position.option_2" },
+              { "value": "bottom", "label": "t:sections.slideshow.blocks.slide.settings.vertical_text_position.option_3" }
+            ],
+            "default": "middle"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Slideshow",
+        "category": "Image",
+        "blocks": [
+          {
+            "type": "slide"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,61 @@
+{% assign timing_in_ms = announcement_bar_timing | times: 1000 %}
+
+<section
+  class="announcement-bar-wrapper"
+  data-section-id="{{ id }}"
+  data-section-type="announcement-bar"
+  data-timing="{{ timing_in_ms }}"
+  {{ block.shopify_attributes }}
+>
+  {%- if blocks.size > 0 -%}
+    <div class="announcement-bar__nav visually-hidden">
+      <button
+        type="button"
+        class="announcement-bar__button announcement-bar__button-previous"
+        aria-label="{{ 'general.accessibility.carousel_previous' | t }}"
+        data-control="prev"
+      >
+        {{ 'general.accessibility.carousel_previous' | t }}
+      </button>
+      <button
+        class="announcement-bar__button announcement-bar__button-pause"
+        data-control="pause"
+        aria-label="{{ 'general.accessibility.pause' | t }}"
+      >
+        {{ 'general.accessibility.pause' | t }}
+      </button>
+      <button
+        type="button"
+        class="announcement-bar__button announcement-bar__button-next"
+        aria-label="{{ 'general.accessibility.carousel_next' | t }}"
+        data-control="next"
+      >
+        {{ 'general.accessibility.carousel_next' | t }}
+      </button>
+    </div>
+    <div class="announcement-bar-slider">
+      {% for block in blocks %}
+        <div
+          class="announcement-bar flex items-center justify-center"
+          style="
+            background-color: {{ block.settings.background_color }};
+            color: {{ block.settings.text_color }};
+          "
+          data-index="{{ forloop.index0 }}"
+          aria-hidden="{% if forloop.index0 == 0%}true{% else %}false{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+          <div class="announcement-bar__content">
+            {%- if block.settings.link != blank -%}
+              <a class="color-inherit" href="{{ block.settings.link }}">
+                {{ block.settings.text | escape }}
+              </a>
+            {%- else -%}
+              {{ block.settings.text | escape }}
+            {%- endif -%}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {%- endif -%}
+</section>

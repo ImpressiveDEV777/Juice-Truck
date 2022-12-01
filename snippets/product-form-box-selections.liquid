@@ -1,0 +1,77 @@
+{% assign count = product.selected_or_first_available_variant.title | plus: 0%}
+
+{% assign max = 0 %}
+{% assign min = 1000 %}
+{% for variant in product.variants %}
+  {% assign current = variant.title | plus: 0 %}
+  {% if max < current %}
+	{% assign max = current %}
+  {% endif %}
+  {% if min > current %}
+	{% assign min = current %}
+  {% endif %}
+{% endfor %}
+{% assign counter = 0 %}
+<table class="box-selections" border="1">
+  {% assign box_collection = collections['all'] %}
+  {% for tag in product.tags %}
+    {% if tag contains 'collection-' %}
+      {% assign t = tag | replace: 'collection-', '' %}
+      {% assign may_be_collection = collections[t] %}
+      {% unless may_be_collection == blank %}
+  		{% assign box_collection = may_be_collection %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+  {% for i in (1..max) %}
+    {% assign counter = counter | plus: 1 %}
+    {% if counter > box_collection.products.size %}
+      {% assign counter = 1 %}
+    {% endif %}
+    {% assign variant = blank %}
+    {% for v in product.variants %}
+      {% assign title = v.title | plus: 0%}
+      {% if title == i %}
+        {% assign variant = v %}
+      {% endif %}
+    {% endfor %}  
+    {% assign selected = box_collection.products.first %}
+  	{% capture content %}
+  	  <div>
+        <div class="product-form__option js-enabled">
+          <select {% if i > count %} disabled {% endif %} class="product-form__option-select box-select" name="properties[Option {{i}}]">
+            {% assign inner_counter = 0 %}
+            {% for p in box_collection.products %}
+            {% if p.handle == product.handle %} {% continue %} {% endif %}
+            {% assign inner_counter = inner_counter | plus: 1 %}
+            <option data-image="{{p.featured_media.preview_image | img_url: '150x'}}" value="{{p.title}}" {% if counter == inner_counter %}selected{% endif %}>{{p.title}}</option>
+            {% if counter == inner_counter %}
+              {% assign selected = p %}
+            {% endif %}
+            {% endfor %}
+          </select>
+          
+        </div>
+      </div>
+  	{% endcapture %}
+    <tr id="variant-{{i}}" data-id="{{variant.id}}" {% if i > count %} style="display:none"{% endif %}>
+      <td><label>Option {{i}}</label></td>
+      <td>
+      	{{selected.featured_media.preview_image | img_url: '300x' | img_tag}}
+      </td>
+      <td>
+        {{content}}
+      </td>
+      <td>
+        <button type="button" data-remove="{{i}}" class="bttn bttn--secondary delete-button" {% if count <= min %}disabled{% endif %}>{% render 'icon-minus' %}</button>
+      </td>
+    </tr>
+    
+  {% endfor %}
+</table>
+<button {% if count >= max %}disabled{% endif %} class="add-more bttn right" id="add-more" data-min="{{min}}" data-max="{{max}}" data-count="{{count}}" type="button">
+  {% render 'icon-plus', non_focusable: true %}  Add a juice
+</button>
+<!-- 
+<button class="add-more" id="add-more" data-min="{{min}}" data-max="{{max}}" data-count="{{count}}" type="button">+</button>
+<button class="delete-item" id="delete" type="button">-</button> -->

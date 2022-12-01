@@ -1,0 +1,77 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "blocks": {
+        "356178d1-4065-4683-97e3-ec5da41c788d": {
+          "type": "collection",
+          "settings": {
+            "collection": "juice-truck-products"
+          }
+        },
+        "ccf54511-a9da-4c72-a8cc-46498241302d": {
+          "type": "collection",
+          "settings": {
+            "collection": "supplements"
+          }
+        },
+        "c3d042fd-ef20-4018-95f5-fd73f81e38ea": {
+          "type": "collection",
+          "settings": {
+            "collection": "pantry"
+          }
+        },
+        "9ea20d51-c67b-477b-ac72-d6e689d5053a": {
+          "type": "collection",
+          "settings": {
+            "collection": "savoury-snacks"
+          }
+        },
+        "350fc77a-406f-4d3b-9b86-fb73d62ea8a8": {
+          "type": "collection",
+          "settings": {
+            "collection": "snacks"
+          }
+        },
+        "89e709b3-e13d-411c-97d7-943738ce74de": {
+          "type": "collection",
+          "settings": {
+            "collection": "fresh-product"
+          }
+        },
+        "e02e44ce-7089-4bcd-be2e-babcea74f155": {
+          "type": "collection",
+          "settings": {
+            "collection": "books"
+          }
+        },
+        "3ed0232c-9ee6-427c-8779-1708dea1a436": {
+          "type": "collection",
+          "settings": {
+            "collection": "chocolate-confectionary"
+          }
+        }
+      },
+      "block_order": [
+        "356178d1-4065-4683-97e3-ec5da41c788d",
+        "ccf54511-a9da-4c72-a8cc-46498241302d",
+        "c3d042fd-ef20-4018-95f5-fd73f81e38ea",
+        "9ea20d51-c67b-477b-ac72-d6e689d5053a",
+        "350fc77a-406f-4d3b-9b86-fb73d62ea8a8",
+        "89e709b3-e13d-411c-97d7-943738ce74de",
+        "e02e44ce-7089-4bcd-be2e-babcea74f155",
+        "3ed0232c-9ee6-427c-8779-1708dea1a436"
+      ],
+      "settings": {
+        "display_type": "selected",
+        "columns": 3,
+        "aspect_ratio": "natural",
+        "collection_title_alignment": "left",
+        "show_product_count": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

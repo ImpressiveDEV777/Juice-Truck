@@ -1,0 +1,313 @@
+{
+  "sections": {
+    "image_with_text_1": {
+      "type": "image-with-text",
+      "blocks": {
+        "0929eb5c-07aa-4622-9896-bc7c58cb8f06": {
+          "type": "svg_image",
+          "settings": {
+            "svg_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0558\/4463\/4802\/files\/juice-truck-homepage-hero-text.svg?v=1645653230",
+            "svg_width": 75
+          }
+        },
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "<p>The Cornerstone of health and wellness, cold pressed juice, plant based meals, snacks on snacks, supplements, staples and more! <\/p>",
+            "subheading_font_size": 18,
+            "subtext_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "0929eb5c-07aa-4622-9896-bc7c58cb8f06",
+        "subheading"
+      ],
+      "settings": {
+        "section_style": "default",
+        "container_radius": 0,
+        "image": "shopify:\/\/shop_images\/JT-Banner.jpg",
+        "is_image_radius": true,
+        "image_radius": 0,
+        "video_url": "",
+        "image_width": "one-half",
+        "aspect_ratio": "natural",
+        "focal_point": "center_center",
+        "image_position": "right",
+        "is_full_padding": false,
+        "text_alignment": "center",
+        "text_alignment_ver": "middle",
+        "text_color": "#e9485d",
+        "text_container_color": "",
+        "media_container_color": "",
+        "text_max_width": 50
+      }
+    },
+    "164575220568fa7fb1": {
+      "type": "image-button-columns",
+      "blocks": {
+        "1b6b7cd8-af23-4379-992c-4aa28434a99a": {
+          "type": "image-button",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JuiceTruck_3263_JPEG_-_Full_size_highest_quality.jpg",
+            "link": "shopify:\/\/pages\/shop-juice",
+            "text": "shop juice"
+          }
+        },
+        "3d27c5c1-e97d-47c2-a682-a17948b6e973": {
+          "type": "image-button",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JuiceTruck_3309_JPEG_-_Full_size_highest_quality.jpg",
+            "link": "shopify:\/\/pages\/shop-market",
+            "text": "shop market"
+          }
+        }
+      },
+      "block_order": [
+        "1b6b7cd8-af23-4379-992c-4aa28434a99a",
+        "3d27c5c1-e97d-47c2-a682-a17948b6e973"
+      ],
+      "settings": {
+        "section_style": "default",
+        "button_count": 2,
+        "button_text_color": "#e9485d",
+        "button_border_color": "#e9485d"
+      }
+    },
+    "16456488948c49bfd7": {
+      "type": "featured-collection-grid",
+      "settings": {
+        "section_style": "default",
+        "text_position": "middle_left",
+        "button_style": "button1",
+        "collection": "juice-truck-products",
+        "products_per_row": 3,
+        "total_row": 2,
+        "aspect_ratio": "natural",
+        "overline": "Start Shopping",
+        "title": "Plants Anywhere",
+        "subheading": "<p>Explore all our plant-based favourites. From cold-pressed juices to snacks, supplements and our go-to pantry essentials.<\/p>",
+        "link_text": "Shop all",
+        "image_radius": 50,
+        "text_max_width": 24
+      }
+    },
+    "1645648832b003d669": {
+      "type": "featured-collection",
+      "settings": {
+        "section_style": "default",
+        "width_full": true,
+        "text_position": "top_left",
+        "collection": "juice-truck-products",
+        "columns": 3,
+        "aspect_ratio": "square",
+        "overline": "",
+        "title": "Best sellers",
+        "subheading": "",
+        "link_text": "",
+        "image_radius": 0,
+        "text_max_width": 50
+      }
+    },
+    "1645649011d8016037": {
+      "type": "image-with-text",
+      "blocks": {
+        "1645649011085bd7e9-0": {
+          "type": "overline",
+          "settings": {
+            "overline": "Cleanse with Us"
+          }
+        },
+        "067a2d2e-6ef5-4e5a-a4c4-f7fc76bd188c": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "<p>Fresh cold-pressed juices delivered right to your door. It’s like hitting your body’s reset button. Say hello to a healthier you. <\/p>",
+            "subheading_font_size": 24,
+            "subtext_alignment": "left"
+          }
+        },
+        "622c01b6-8b67-4aa8-b415-9243795e6e0b": {
+          "type": "button",
+          "settings": {
+            "link": "shopify:\/\/collections\/juice-cleanses-kits",
+            "link_text": "Shop Cleanses",
+            "button_style": "button2"
+          }
+        }
+      },
+      "block_order": [
+        "1645649011085bd7e9-0",
+        "067a2d2e-6ef5-4e5a-a4c4-f7fc76bd188c",
+        "622c01b6-8b67-4aa8-b415-9243795e6e0b"
+      ],
+      "settings": {
+        "section_style": "default",
+        "container_radius": 0,
+        "image": "shopify:\/\/shop_images\/JuiceTruck_3719_TIFF_-_Adobe_RGB_1998_8bit_739ee513-7cc6-4716-a941-954f7e94d409.jpg",
+        "is_image_radius": true,
+        "image_radius": 50,
+        "video_url": "",
+        "image_width": "one-half",
+        "aspect_ratio": "natural",
+        "focal_point": "center_center",
+        "image_position": "right",
+        "is_full_padding": false,
+        "text_alignment": "left",
+        "text_alignment_ver": "top",
+        "text_color": "#000000",
+        "text_container_color": "",
+        "media_container_color": "",
+        "text_max_width": 46
+      }
+    },
+    "16456491351b5daf3f": {
+      "type": "image-with-text",
+      "blocks": {
+        "16456491359ab6bca7-0": {
+          "type": "overline",
+          "settings": {
+            "overline": "our mission"
+          }
+        },
+        "16456491359ab6bca7-2": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "<p>To have fun, to inspire and support community, to make snacking healthy, to be a gateway to a healthier more sustainable way of being. To explore what’s possible in plant based living. To stay curious. To find the next great snack! <\/p>",
+            "subheading_font_size": 24,
+            "subtext_alignment": "left"
+          }
+        },
+        "4be49ee6-c2b9-440a-b363-c424a26f6402": {
+          "type": "button",
+          "settings": {
+            "link": "shopify:\/\/pages\/our-story",
+            "link_text": "About Us",
+            "button_style": "button3"
+          }
+        }
+      },
+      "block_order": [
+        "16456491359ab6bca7-0",
+        "16456491359ab6bca7-2",
+        "4be49ee6-c2b9-440a-b363-c424a26f6402"
+      ],
+      "settings": {
+        "section_style": "full-height",
+        "container_radius": 0,
+        "image": "shopify:\/\/shop_images\/JuiceTruck_50904_1.jpg",
+        "is_image_radius": true,
+        "image_radius": 0,
+        "video_url": "",
+        "image_width": "one-half",
+        "aspect_ratio": "natural",
+        "focal_point": "center_center",
+        "image_position": "left",
+        "is_full_padding": false,
+        "text_alignment": "left",
+        "text_alignment_ver": "top",
+        "text_color": "#ffffff",
+        "text_container_color": "#186a48",
+        "media_container_color": "",
+        "text_max_width": 36
+      }
+    },
+    "1645649741536c7697": {
+      "type": "quote",
+      "blocks": {
+        "1645649741b16c062f-0": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>I’ve been a regular of The Juice Truck since their food truck days when they launched in 2011. The Juice Truck is my go to spot for health and wellness. This place changed the scene of healthy eating in Vancouver.<\/p>",
+            "author": "Justin Yorke"
+          }
+        },
+        "37447f21-1921-4f16-94cd-1067408b73ac": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>I don’t think you should have to choose between feeling good and loving what you eat. It’s one of the things I love most about The Juice Truck: they make the most delicious plant food that just so happens to be super nourishing. Whenever I need a pick-me-up, whether it’s a fun tincture, a salad or a sweet treat, this is where I go.<\/p>",
+            "author": "Desiree Nielsen, RD"
+          }
+        },
+        "2bf10263-77f7-4ff1-a9df-daba4c58f197": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>Everyone around me knows, I need to have a green protein smoothie for recovery almost every day. <\/p><p>The Juice Truck is the most approachable place to find delicious plant-based food. Not to mention the Bestie Bowl is hands down the best açaí bowl in the city.<\/p>",
+            "author": "Andrew Sabarre"
+          }
+        }
+      },
+      "block_order": [
+        "1645649741b16c062f-0",
+        "37447f21-1921-4f16-94cd-1067408b73ac",
+        "2bf10263-77f7-4ff1-a9df-daba4c58f197"
+      ],
+      "settings": {
+        "section_style": "default",
+        "section_bg_color": "",
+        "section_text_color": "",
+        "timer": 7,
+        "text_max_width": 37
+      }
+    },
+    "1645649852d6af354d": {
+      "type": "image-with-text",
+      "blocks": {
+        "16456498528eccc7fb-0": {
+          "type": "overline",
+          "settings": {
+            "overline": "The Juice Truck Book"
+          }
+        },
+        "16456498528eccc7fb-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>A Guide<br\/>to Juicing<\/p>",
+            "heading_size": 72
+          }
+        },
+        "567faf75-1075-4314-a61b-1c14bf205924": {
+          "type": "button",
+          "settings": {
+            "link": "shopify:\/\/collections\/all",
+            "link_text": "Shop Books",
+            "button_style": "button3"
+          }
+        }
+      },
+      "block_order": [
+        "16456498528eccc7fb-0",
+        "16456498528eccc7fb-1",
+        "567faf75-1075-4314-a61b-1c14bf205924"
+      ],
+      "settings": {
+        "section_style": "default",
+        "container_radius": 20,
+        "image": "shopify:\/\/shop_images\/JuiceTruck_3689_JPEG_-_Full_size_highest_quality.jpg",
+        "is_image_radius": false,
+        "image_radius": 0,
+        "video_url": "",
+        "image_width": "two-third",
+        "aspect_ratio": "natural",
+        "focal_point": "center_center",
+        "image_position": "right",
+        "is_full_padding": false,
+        "text_alignment": "left",
+        "text_alignment_ver": "middle",
+        "text_color": "#ffffff",
+        "text_container_color": "#186a48",
+        "media_container_color": "#f8f8f8",
+        "text_max_width": 50
+      }
+    }
+  },
+  "order": [
+    "image_with_text_1",
+    "164575220568fa7fb1",
+    "16456488948c49bfd7",
+    "1645648832b003d669",
+    "1645649011d8016037",
+    "16456491351b5daf3f",
+    "1645649741536c7697",
+    "1645649852d6af354d"
+  ]
+}

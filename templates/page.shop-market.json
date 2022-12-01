@@ -1,0 +1,95 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_max_width": 500
+      }
+    },
+    "1655156056a9e456ef": {
+      "type": "collection-list-grid",
+      "blocks": {
+        "8e5ffcbf-c6f2-405e-9992-ca4b1fee7004": {
+          "type": "collection",
+          "settings": {
+            "collection": "juice-truck-products"
+          }
+        },
+        "fa065589-d22d-4a58-83b0-d7003be9e025": {
+          "type": "collection",
+          "settings": {
+            "collection": "pantry"
+          }
+        },
+        "dffd9598-c6da-4d34-88e7-8534a98eed85": {
+          "type": "collection",
+          "settings": {
+            "collection": "drinks"
+          }
+        },
+        "593803a9-ad37-46f1-8cb1-4f6ee64c4598": {
+          "type": "collection",
+          "settings": {
+            "collection": "savoury-snacks"
+          }
+        },
+        "173f7721-d0df-4c8f-95c5-50128a784abf": {
+          "type": "collection",
+          "settings": {
+            "collection": "snacks"
+          }
+        },
+        "be344feb-1027-4af5-8159-fcb8f67dd3c0": {
+          "type": "collection",
+          "settings": {
+            "collection": "supplements"
+          }
+        },
+        "199337f5-fe2f-4200-a512-4d4b0b703b6c": {
+          "type": "collection",
+          "settings": {
+            "collection": "books"
+          }
+        },
+        "46434375-bf23-4247-9eb0-77141aa6a734": {
+          "type": "collection",
+          "settings": {
+            "collection": "fresh-product"
+          }
+        },
+        "9102e370-5cc4-4dd2-a0b0-90738ec6a6f0": {
+          "type": "collection",
+          "settings": {
+            "collection": "chocolate-confectionary"
+          }
+        }
+      },
+      "block_order": [
+        "8e5ffcbf-c6f2-405e-9992-ca4b1fee7004",
+        "fa065589-d22d-4a58-83b0-d7003be9e025",
+        "dffd9598-c6da-4d34-88e7-8534a98eed85",
+        "593803a9-ad37-46f1-8cb1-4f6ee64c4598",
+        "173f7721-d0df-4c8f-95c5-50128a784abf",
+        "be344feb-1027-4af5-8159-fcb8f67dd3c0",
+        "199337f5-fe2f-4200-a512-4d4b0b703b6c",
+        "46434375-bf23-4247-9eb0-77141aa6a734",
+        "9102e370-5cc4-4dd2-a0b0-90738ec6a6f0"
+      ],
+      "settings": {
+        "section_style": "default",
+        "columns": 4,
+        "aspect_ratio": "natural",
+        "overline": "",
+        "title": "Shop Market",
+        "subheading": "",
+        "heading_alignment": "center",
+        "text_max_width": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1655156056a9e456ef"
+  ]
+}
