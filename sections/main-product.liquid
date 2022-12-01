@@ -218,13 +218,6 @@
                       form: form
                     %}
 
-                  {% unless product.tags contains 'Shipping' %}
-                    <div class="delivery_alert_container_p">
-                      <p class="alert_message_p">{{ settings.error_pdp }}</p>
-                      <button class="bttn button1" id="change_code_p">CHANGE DELIVERY METHOD</button>
-                    </div>
-                  {% endunless %}
-
                   {%- when 'inventory-counter' -%}
                     {%- render 'inventory-counter' with
                       product: product,
@@ -233,89 +226,7 @@
                       low_inventory_threshold: block.settings.low_inventory_threshold,
                       current_variant: current_variant,
                     -%}
-
-                  {%- when 'description' -%}
-                    {%- case block.settings.style -%}
-                      {%- when 'paragraph' -%}
-                        <div {{ block.shopify_attributes }} class="product__description rte">
-                          {{ product.description }}
-                        </div>
-                      {%- when 'open' -%}
-                        <div {{ block.shopify_attributes }} class="accordion">
-                          <div class="accordion__group">
-                            <button 
-                              class="accordion__label" 
-                              aria-expanded="true" 
-                              aria-controls="product-description--{{ 'products.product.description' | t | handle }}"
-                            >
-                              {{ 'products.product.description' | t }}
-                            </button>
-                            <div id="product-description--{{ 'products.product.description' | t | handle }}" class="accordion__text" style="display: block;">
-                              {{ product.description }}
-                            </div>
-                          </div>
-                        </div>
-                      {%- when 'closed' -%}
-                        <div {{ block.shopify_attributes }} class="accordion">
-                          <div class="accordion__group">
-                            <button 
-                              class="accordion__label" 
-                              aria-expanded="false" 
-                              aria-controls="product-description--{{ 'products.product.description' | t | handle }}"
-                            >
-                              {{ 'products.product.description' | t }}
-                            </button>
-                            <div id="product-description--{{ 'products.product.description' | t | handle }}" class="accordion__text">
-                              {{ product.description }}
-                            </div>
-                          </div>
-                        </div>
-                    {%- endcase -%}
-
-                  {%- when 'share' -%}
-                    <div {{ block.shopify_attributes }} class="product__share-container">
-                      <button
-                        type="button"
-                        class="product__share"
-                        data-social-share
-                        aria-haspopup="true"
-                      >
-                        <span class="product__share-text">
-                          {%- render 'icon-share' with non_focusable: true -%}
-                          {{ 'general.social.share' | t }}
-                        </span>
-
-                        <div class="product__share-icons" aria-hidden="true" aria-label="{{ 'general.social.alt_text.share_menu' | t }}">
-                          {% render 'share-icons' with
-                            url: product.url,
-                            title: product.title,
-                            image: product.featured_image
-                          %}
-                        </div>
-                      </button>
-                    </div>
-
-                  {%- when 'accordion' -%}
-                    <div {{ block.shopify_attributes }} class="accordion">
-                      <div class="accordion__group">
-                        <button 
-                          class="accordion__label" 
-                          aria-expanded="false" 
-                          aria-controls="accordion--{{ block.settings.heading | handle }}{{ block.id }}"
-                        >
-                          {{ block.settings.heading }}
-                        </button>
-                        <div id="accordion--{{ block.settings.heading | handle }}{{ block.id }}" class="accordion__text">
-                          {{ block.settings.content }}
-                        </div>
-                      </div>
-                    </div>
-
-                  {%- when 'text' -%}
-                    <div {{ block.shopify_attributes }} class="product__description">
-                      <div class="rte">{{ block.settings.text }}</div>
-                    </div>
-              
+                    
               	  {%- when 'cleanse' -%}
                     <div class="product-form__controls-group product-form__controls-group-options">
                       {% render 'product-form-box-selections' with
@@ -362,6 +273,115 @@
             </div>
           {% endform %}
           
+          {% unless product.tags contains 'Shipping' %}
+            <div class="delivery_alert_container_p">
+              <p class="alert_message_p">{{ settings.error_pdp }}</p>
+              <button class="bttn button1" id="change_code_p">CHANGE DELIVERY METHOD</button>
+            </div>
+          {% endunless %}
+
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% unless product.tags contains 'Shipping' %}
+                <div class="delivery_alert_container_p">
+                  <p class="alert_message_p">{{ settings.error_pdp }}</p>
+                  <button class="bttn button1" id="change_code_p">CHANGE DELIVERY METHOD</button>
+                </div>
+              {% endunless %}
+
+              {%- when 'inventory-counter' -%}
+                {%- render 'inventory-counter' with
+                  product: product,
+                  show_label: block.settings.show_label,
+                  inventory_max: block.settings.inventory_max,
+                  low_inventory_threshold: block.settings.low_inventory_threshold,
+                  current_variant: current_variant,
+                -%}
+
+              {%- when 'description' -%}
+                {%- case block.settings.style -%}
+                  {%- when 'paragraph' -%}
+                    <div {{ block.shopify_attributes }} class="product__description rte">
+                      {{ product.description }}
+                    </div>
+                  {%- when 'open' -%}
+                    <div {{ block.shopify_attributes }} class="accordion">
+                      <div class="accordion__group">
+                        <button 
+                          class="accordion__label" 
+                          aria-expanded="true" 
+                          aria-controls="product-description--{{ 'products.product.description' | t | handle }}"
+                        >
+                          {{ 'products.product.description' | t }}
+                        </button>
+                        <div id="product-description--{{ 'products.product.description' | t | handle }}" class="accordion__text" style="display: block;">
+                          {{ product.description }}
+                        </div>
+                      </div>
+                    </div>
+                  {%- when 'closed' -%}
+                    <div {{ block.shopify_attributes }} class="accordion">
+                      <div class="accordion__group">
+                        <button 
+                          class="accordion__label" 
+                          aria-expanded="false" 
+                          aria-controls="product-description--{{ 'products.product.description' | t | handle }}"
+                        >
+                          {{ 'products.product.description' | t }}
+                        </button>
+                        <div id="product-description--{{ 'products.product.description' | t | handle }}" class="accordion__text">
+                          {{ product.description }}
+                        </div>
+                      </div>
+                    </div>
+                {%- endcase -%}
+
+              {%- when 'share' -%}
+                <div {{ block.shopify_attributes }} class="product__share-container">
+                  <button
+                    type="button"
+                    class="product__share"
+                    data-social-share
+                    aria-haspopup="true"
+                  >
+                    <span class="product__share-text">
+                      {%- render 'icon-share' with non_focusable: true -%}
+                      {{ 'general.social.share' | t }}
+                    </span>
+
+                    <div class="product__share-icons" aria-hidden="true" aria-label="{{ 'general.social.alt_text.share_menu' | t }}">
+                      {% render 'share-icons' with
+                        url: product.url,
+                        title: product.title,
+                        image: product.featured_image
+                      %}
+                    </div>
+                  </button>
+                </div>
+
+              {%- when 'accordion' -%}
+                <div {{ block.shopify_attributes }} class="accordion">
+                  <div class="accordion__group">
+                    <button 
+                      class="accordion__label" 
+                      aria-expanded="false" 
+                      aria-controls="accordion--{{ block.settings.heading | handle }}{{ block.id }}"
+                    >
+                      {{ block.settings.heading }}
+                    </button>
+                    <div id="accordion--{{ block.settings.heading | handle }}{{ block.id }}" class="accordion__text">
+                      {{ block.settings.content }}
+                    </div>
+                  </div>
+                </div>
+
+              {%- when 'text' -%}
+                <div {{ block.shopify_attributes }} class="product__description">
+                  <div class="rte">{{ block.settings.text }}</div>
+                </div>
+
+            {%- endcase -%}
+          {% endfor %}
         </div>
       </div>
 
