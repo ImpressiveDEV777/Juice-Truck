@@ -35,7 +35,7 @@
     <div class="product-form__option product-form__option-swatches js-enabled">
       <div class="product-form__color-swatches" data-option-buttons data-product-option="Option{{ option.position }}">
         <div class="product-form__option-label-wrapper">
-          <label class="product-form__option-label" for="Option{{ option.position }}--{{ block.id }}">
+          <label class="product-form__option-label" for="Option{{ option.position }}{% if product.template_suffix != 'build-a-cleanse' %}--{{ block.id }}{% endif %}">
             {{ option.name }}
           </label>
 
@@ -57,7 +57,7 @@
         {% endfor %}
 
         <select
-          id="Option{{ option.position }}--{{ block.id }}"
+          id="Option{{ option.position }}{% if product.template_suffix != 'build-a-cleanse' %}--{{ block.id }}{% endif %}"
           name="options[{{ option.name | escape }}]"
           class="product-form__option-select"
         >
@@ -81,7 +81,7 @@
       <div class="product-form__option product-form__option-chip js-enabled">
         <div class="product-form__chip-wrapper" data-option-buttons>
           <div class="product-form__option-label-wrapper">
-            <label class="product-form__option-label" for="Option{{ option.position }}--{{ block.id }}">
+            <label class="product-form__option-label" for="Option{{ option.position }}{% if product.template_suffix != 'build-a-cleanse' %}--{{ block.id }}{% endif %}">
               {{ option.name }}
             </label>
 
@@ -103,7 +103,7 @@
           {% endfor %}
 
           <select
-            id="Option{{ option.position }}--{{ block.id }}"
+            id="Option{{ option.position }}{% if product.template_suffix != 'build-a-cleanse' %}--{{ block.id }}{% endif %}"
             name="options[{{ option.name | escape }}]"
             class="product-form__option-select"
           >
@@ -127,7 +127,7 @@
   {% unless swatch_options contains option_name or chip_options contains option_name %}
     <div class="product-form__option js-enabled">
       <div class="product-form__option-label-wrapper">
-        <label class="product-form__option-label" for="Option{{ option.position }}--{{ block.id }}">
+        <label class="product-form__option-label" for="Option{{ option.position }}{% if product.template_suffix != 'build-a-cleanse' %}--{{ block.id }}{% endif %}">
           {{ option.name }}
         </label>
 
@@ -138,7 +138,7 @@
 
       <div class="product-form__option-select-wrapper">
         <select
-          id="Option{{ option.position }}--{{ block.id }}"
+          id="Option{{ option.position }}{% if product.template_suffix != 'build-a-cleanse' %}--{{ block.id }}{% endif %}"
           name="options[{{ option.name | escape }}]"
           class="product-form__option-select">
           {% for value in option.values %}

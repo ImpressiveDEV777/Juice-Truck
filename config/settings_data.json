@@ -64,6 +64,8 @@
     "swatch_options": "Color",
     "chip_options": "Size",
     "postal_code_p": "V3G,V2S,V2T,V4X,V2V,V4S,V2P,V4Z,V2R,V5K,V5L,V5M,V5N,V5P,V5R,V5S,V5T,V5V,V5W,V5X,V5Y,V5Z,V6A,V6B,V6C,V6E,V6G,V6H,V6J,V6K,V6L,V6M,V6N,V6P,V6R,V6S,V6T,V6Z,V7R,V7X,V7Y,V7P,V7S,V7T,V7V,V7W,V7G,V7H,V7J,V7K,V7L,V7M,V7N,V6V,V6W,V6X,V6Y,V7A,V7B,V7C,V7E,V3C,V3L,V3M,V3J,V3N,V5A,V5B,V5C,V5E,V5G,V5H,V5J,V0N,V2W,V4R,V2X,V3Y,V4A,V4N,V4P,V3R,V3S,V3T,V3V,V3W,V3X,V3Z,V4B,V4C,V4L,V4M,V4E,V4G,V4K,V3A,V1M,V4W,V2Y,V2Z,V3B,V3C,V3E,V3J,V3K,V3H,V8W,V8T,V8V,V9S,V9T,V9V,V9R,V8E,V8B,V0N",
+    "method1_alert": "Sorry, we do not currently deliver all products to your postal code. Select the Canada Post Shipping tab to browse the website for items available, or select the Shop Canada Wide tab for available products.",
+    "error_pdp": "Unfortunately we can’t ship this item to your postal code. Select the Canada Post Shipping tab to see available items to your destination.",
     "just_browsing_message": "Interested in this product? Please select a delivery method in the header above.",
     "cart_quick_shop_enabled": true,
     "cart_quick_shop_show_quantity_input": false,

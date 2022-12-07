@@ -2392,7 +2392,6 @@
       },
       body: serialize(form)
     }).then(r => r.json()).then(item => {
-      console.log(item);
 
       if (item.status == '422') {
         var errorMessage = {

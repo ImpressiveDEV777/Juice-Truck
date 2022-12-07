@@ -186,7 +186,7 @@
 
                   {%- when 'variant_picker' -%}
                     {% unless product.has_only_default_variant %}
-                      <div {{ block.shopify_attributes }} class="product-form__controls-group product-form__controls-group--options">
+                      <div {{ block.shopify_attributes }} class="product-form__controls-group product-form__controls-group--options {% if product.template_suffix == 'build-a-cleanse' %}hidden{% endif %}">
                         {% render 'product-form-options' with
                           product: product,
                           block: block

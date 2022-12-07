@@ -15697,3 +15697,7 @@ model-viewer{
 .box-selections .bttn{
   margin: auto;
 }
+
+.hidden {
+  display: none;
+}

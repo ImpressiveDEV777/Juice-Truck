@@ -281,7 +281,6 @@
     quitBrowsing();
     shippingQuickAddShow();
     zapierShippingNoWork();
-    console.log("abc");
     zapierPickupWork();
   });
   
@@ -449,6 +448,7 @@
   var deleteBtn = document.getElementById('delete');
   var setOption = function(id, value) {
     var option = document.getElementById(id);
+    console.log(option);
     if (option) {
       option.value = value;
       option.dispatchEvent(new Event('change'));
